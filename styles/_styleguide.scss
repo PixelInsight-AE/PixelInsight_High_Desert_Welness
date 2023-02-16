@@ -6,3 +6,35 @@
 
  * ! : ...
 */
+
+/* Colors */
+$primary-color: #6da04b; // green
+$secondary-color: #f5e6ca; // beige
+$text-color: #2e2e2e; // dark gray
+$background-color: #f9f9f9; // light gray
+$link-color: #0066cc; // blue
+$link-hover-color: #003399; // darker blue
+
+/* Fonts */
+$primary-font: 'Open Sans', sans-serif;
+$secondary-font: 'Roboto', sans-serif;
+
+/* Margins and paddings */
+$margin-small: 0.625rem; // 10px
+$margin-medium: 1.25rem; // 20px
+$margin-large: 1.875rem; // 30px
+$padding-small: 0.625rem; // 10px
+$padding-medium: 1.25rem; // 20px
+$padding-large: 1.875rem; // 30px;
+
+/* Buttons */
+$button-background-color: $primary-color;
+$button-text-color: $secondary-color;
+$button-hover-background-color: darken($primary-color, 10%);
+$button-hover-text-color: $secondary-color;
+
+/* Forms */
+$input-background-color: $background-color;
+$input-border-color: $text-color;
+$input-focus-color: $primary-color;
+
