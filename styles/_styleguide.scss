@@ -12,11 +12,11 @@ $primary-color: #6da04b; // green
 $secondary-color: #f5e6ca; // beige
 $text-color: #2e2e2e; // dark gray
 $background-color: #f9f9f9; // light gray
-$link-color: #0066cc; // blue
-$link-hover-color: #003399; // darker blue
+$link-color: #7B1FA2; // purple
+$link-hover-color: #1565C0; // blue
 
 /* Fonts */
-$primary-font: 'Open Sans', sans-serif;
+$primary-font: 'Helvetica Neue', sans-serif;
 $secondary-font: 'Roboto', sans-serif;
 
 /* Margins and paddings */
@@ -38,3 +38,75 @@ $input-background-color: $background-color;
 $input-border-color: $text-color;
 $input-focus-color: $primary-color;
 
+/* pulled a list of popular colors for dispensaries for reference */
+// Greens
+$green-1: #1B5E20;
+$green-2: #2E7D32;
+$green-3: #388E3C;
+$green-4: #43A047;
+$green-5: #4CAF50;
+$green-6: #66BB6A;
+$green-7: #81C784;
+$green-8: #A5D6A7;
+$green-9: #C8E6C9;
+$green-10: #E8F5E9;
+
+// Purples
+$purple-1: #4A148C;
+$purple-2: #6A1B9A;
+$purple-3: #7B1FA2;
+$purple-4: #8E24AA;
+$purple-5: #9C27B0;
+$purple-6: #AB47BC;
+$purple-7: #BA68C8;
+$purple-8: #CE93D8;
+$purple-9: #E1BEE7;
+$purple-10: #F3E5F5;
+
+// Blues
+$blue-1: #0D47A1;
+$blue-2: #1565C0;
+$blue-3: #1976D2;
+$blue-4: #1E88E5;
+$blue-5: #2196F3;
+$blue-6: #42A5F5;
+$blue-7: #64B5F6;
+$blue-8: #90CAF9;
+$blue-9: #BBDEFB;
+$blue-10: #E3F2FD;
+
+// Oranges
+$orange-1: #E65100;
+$orange-2: #EF6C00;
+$orange-3: #F57C00;
+$orange-4: #FB8C00;
+$orange-5: #FF9800;
+$orange-6: #FFA726;
+$orange-7: #FFB74D;
+$orange-8: #FFCC80;
+$orange-9: #FFE0B2;
+$orange-10: #FFF3E0;
+
+// Grays
+$gray-1: #212121;
+$gray-2: #424242;
+$gray-3: #616161;
+$gray-4: #757575;
+$gray-5: #9E9E9E;
+$gray-6: #BDBDBD;
+$gray-7: #E0E0E0;
+$gray-8: #EEEEEE;
+$gray-9: #F5F5F5;
+$gray-10: #FAFAFA;
+
+// Reds
+$red-1: #B71C1C;
+$red-2: #C62828;
+$red-3: #D32F2F;
+$red-4: #E53935;
+$red-5: #F44336;
+$red-6: #EF5350;
+$red-7: #E57373;
+$red-8: #EF9A9A;
+$red-9: #FFCDD2;
+$red-10: #FFEBEE;
