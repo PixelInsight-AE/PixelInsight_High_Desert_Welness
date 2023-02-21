@@ -44,3 +44,17 @@ h1, h2 {
   width: 75px;
   height: 75px;
 }
+
+.card-item {
+  flex: 0 0 250px;
+  border: solid 3px $green-1;
+  @include shadow-1;
+  border-radius: 10px 0 10px 0;
+  margin: $margin-small;
+}
+
+#flower, #edibles, #concentrates, #cartridges {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+}
