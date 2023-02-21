@@ -63,7 +63,7 @@ h1, h2 {
   margin: 0.625rem;
 }
 
-#flower, #edibles, #concentrates, #cartridges {
+#flower, #edibles, #concentrates, #cartridges, #pre-rolls {
   display: flex;
   overflow-x: auto;
   white-space: nowrap;
