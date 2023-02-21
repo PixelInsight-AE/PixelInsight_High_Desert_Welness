@@ -38,6 +38,11 @@ $input-background-color: $background-color;
 $input-border-color: $text-color;
 $input-focus-color: $primary-color;
 
+/* Shadows */
+@mixin shadow-1 {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
 /* pulled a list of popular colors for dispensaries for reference */
 // Greens
 $green-1: #1B5E20;
