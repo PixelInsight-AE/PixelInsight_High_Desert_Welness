@@ -67,4 +67,8 @@ h1, h2 {
   display: flex;
   overflow-x: auto;
   white-space: nowrap;
+}
+
+#map {
+  border-right: solid 2px gray;
 }/*# sourceMappingURL=styles.css.map */

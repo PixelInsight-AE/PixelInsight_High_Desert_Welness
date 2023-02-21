@@ -22,17 +22,21 @@ log();
 
 
 
-const settings = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://weed-strain1.p.rapidapi.com/?ordering=-strain",
-	"method": "GET",
-	"headers": {
-		"X-RapidAPI-Key": "d4ed0cb2eemsh12542596531d07ap1e5c64jsn4a714d53114c",
-		"X-RapidAPI-Host": "weed-strain1.p.rapidapi.com"
-	}
-};
 
-$.ajax(settings).done(function (response) {
-	console.log(response);
-});
+$(document).ready() {
+  const settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://weed-strain1.p.rapidapi.com/?ordering=-strain",
+    "method": "GET",
+    "headers": {
+      "X-RapidAPI-Key": "d4ed0cb2eemsh12542596531d07ap1e5c64jsn4a714d53114c",
+      "X-RapidAPI-Host": "weed-strain1.p.rapidapi.com"
+    }
+  };
+  
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+  });
+
+};
