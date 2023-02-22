@@ -27,8 +27,13 @@ $link-color: #7B1FA2; // purple
 $link-hover-color: #1565C0; // blue
 
 /* Fonts */
-$primary-font: 'Helvetica Neue', sans-serif;
+$primary-font: 'trade-gothic-next' ,sans-serif;
 $secondary-font: 'Roboto', sans-serif;
+
+@font-face {
+  font-family: HighDesert;
+  src: url(assets/fonts/Raleway/Raleway-VariableFont_wght.ttf);
+}
 
 /* Margins and paddings */
 $margin-small: 0.625rem; // 10px
@@ -51,7 +56,7 @@ $input-focus-color: $primary-color;
 
 /* Shadows */
 @mixin shadow-1 {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 /* pulled a list of popular colors for dispensaries for reference */

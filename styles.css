@@ -16,6 +16,10 @@
 /* color picker */
 /* Colors */
 /* Fonts */
+@font-face {
+  font-family: HighDesert;
+  src: url(assets/fonts/Raleway/Raleway-VariableFont_wght.ttf);
+}
 /* Margins and paddings */
 /* Buttons */
 /* Forms */
@@ -37,46 +41,59 @@ header header img {
   height: 50px;
 }
 header h1 {
+  margin-top: 3rem;
   font-size: 3rem;
   font-weight: 600;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: HighDesert;
   margin-bottom: 1rem;
+}
+header #logo {
+  margin-bottom: 1rem;
+  width: 125px;
+  height: 130px;
 }
 
 nav {
   background-color: #abbe4b;
   box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
 }
-
-nav img {
+nav nav img {
   width: 30px;
   height: 30px;
 }
 
-#hero-img {
+#hero-section h2 {
+  font-size: 2rem;
+}
+#hero-section #hero-image {
   margin-top: 10px;
   margin-bottom: 10px;
-  border: solid 3px #1B5E20;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  border: solid 4px #dea467;
+  box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
   border-radius: 30px 0 30px 0;
 }
-
-h1, h2 {
-  font-family: "Helvetica Neue", sans-serif;
-  margin-top: 25px;
-  padding-top: 10px;
+#hero-section h3 {
+  font-size: 1.75rem;
 }
 
-#logo {
-  margin-top: 20px;
-  width: 75px;
-  height: 75px;
+@media screen and (max-width: 480px) {
+  #brand-img {
+    border: 1px solid #dea467;
+    border-radius: 10px;
+    width: 40px;
+    height: 45px;
+  }
+  nav {
+    background-color: #a3583a;
+  }
+  nav .navbar-toggler-icon {
+    color: #d1df93;
+  }
 }
-
 .card-item {
   flex: 0 0 250px;
   border: solid 3px #1B5E20;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   border-radius: 10px 0 10px 0;
   margin: 0.625rem;
 }
@@ -89,4 +106,11 @@ h1, h2 {
 
 #map {
   border-right: solid 2px gray;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*
+h1, h2 {
+  font-family: $primary-font;
+  margin-top: 25px;
+  padding-top: 10px;
+}*//*# sourceMappingURL=styles.css.map */
