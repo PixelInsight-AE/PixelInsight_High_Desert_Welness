@@ -86,10 +86,38 @@ nav nav img {
   nav {
     background-color: #a3583a;
   }
-  nav .navbar-toggler-icon {
-    color: #d1df93;
+  nav .navbar-toggler {
+    background-color: #d1df93;
   }
 }
+i.fa-leaf {
+  color: #abbe4b;
+}
+i.fa-notes-medical {
+  color: #BA68C8;
+}
+i.fa-earth-europe {
+  color: #1565C0;
+}
+
+.social-media {
+  position: relative;
+  height: 200px;
+}
+.social-media i {
+  position: absolute;
+}
+.social-media i.fa-instagram {
+  top: 5;
+  left: 0;
+  color: #dea467;
+}
+.social-media i.fa-twitter {
+  bottom: 0;
+  right: 0;
+  color: #dea467;
+}
+
 .card-item {
   flex: 0 0 250px;
   border: solid 3px #1B5E20;

@@ -63,6 +63,7 @@ header {
         height: 30px;
         //padding-right: px;
       }
+      
     }
 
 
@@ -93,11 +94,42 @@ header {
 
   nav {
     background-color: $terpine-dark;
-      .navbar-toggler-icon {
-        color: $flower-light;
-      }
+    .navbar-toggler {
+      background-color: $flower-light;
+    }
   }
 
+}
+
+i {
+  &.fa-leaf {
+    color: $flower-medium;
+  }
+  &.fa-notes-medical {
+    color: $purple-7;
+  }
+  &.fa-earth-europe {
+    color: $blue-2;
+  }
+}
+
+.social-media {
+  position: relative; 
+  height: 200px; 
+  i {
+    position: absolute;
+    &.fa-instagram {
+      top: 5; 
+      left: 0;
+      color: $terpine-light; 
+    }
+    &.fa-twitter {
+      bottom: 0;
+      right: 0;
+      color: $terpine-light; 
+
+    }
+  }
 }
   
 
