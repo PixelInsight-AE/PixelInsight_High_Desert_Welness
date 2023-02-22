@@ -18,17 +18,18 @@
               0 16px 32px rgba(163, 88, 58, 0.2);
 }
 
-
-
-header {
-  //background-color: $terpine-light;
-  color: $flower-dark;    
-  @include text-shadow();
+@mixin  header-background {
   background-image: url(assets/images/weedDewDrop.png);
   background-color: rgba(255, 255, 255, 0.8);
   background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+header {
+  color: $flower-dark;    
+  @include text-shadow();
+  @include header-background();
       header img {
         border: 2px solid $terpine-dark;
         color: $terpine-dark;
@@ -37,8 +38,9 @@ header {
       }  
       h1 {
         font-size: 3rem;
-        font-weight: 500;
+        font-weight: 600;
         font-family: $primary-font;
+        margin-bottom: 1rem;
       }
 }
 
