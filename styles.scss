@@ -9,7 +9,12 @@
 @import "styles/_variables";
 @import "./styles/_styleguide";
 
-
+@import "./styles/breakpoints/styles-xs";
+@import "./styles/breakpoints/styles-sm";
+@import "./styles/breakpoints/styles-md";
+@import "./styles/breakpoints/styles-lg";
+@import "./styles/breakpoints/styles-xl";
+@import "./styles/breakpoints/styles-xll";
 
 @mixin text-shadow {
   text-shadow: 2px 2px 0 rgba(163, 88, 58, 0.2);
@@ -63,26 +68,50 @@ header {
         height: 30px;
         //padding-right: px;
       }
+      #logo-small {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+      
+      #logo-small.visible {
+        opacity: 1;
+      }
+      
       
     }
-
+    
 
 #hero-section {
+  margin-bottom: 2rem;
     h2 {
       font-size: 2rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
     }
-    #hero-image {
+    #hero-img {
       margin-top: 10px;
       margin-bottom: 10px;
-      border: solid 4px $terpine-light;
+      border: solid 2px $purple-4;
       @include nice-box-shadow();
       
-      border-radius: 30px 0 30px 0;
+      border-radius: 30px;
     }
-    h3 {
-      font-size: 1.75rem;
+    #mission-statement {
+      h3 {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+      }
+      img {
+        border: solid 2px $purple-4;
+        @include nice-box-shadow();
+        
+        border-radius: 30px;
+      }
     }
 }
+
+
 
 @media screen and (max-width: 480px) {
   #brand-img {
@@ -98,7 +127,7 @@ header {
       background-color: $flower-light;
     }
   }
-
+  
 }
 
 i {
@@ -111,6 +140,11 @@ i {
   &.fa-earth-europe {
     color: $blue-2;
   }
+}
+
+.nav-logo {
+  width: 35px;
+  height: 40px;
 }
 
 .social-media {
@@ -131,6 +165,16 @@ i {
     }
   }
 }
+
+#hours-operation {
+  
+  //width: 450px;
+  @include shadow-1;
+  font-size: 1.5rem;
+  border-radius: 5%;
+  
+  
+}
   
 
 
@@ -142,7 +186,7 @@ i {
   margin: $margin-small;
 }
 
-#flower, #edibles, #concentrates, #cartridges, #pre-rolls {
+#flower, #edibles, #concentrates, #cartridges, #pre-rolls, #catagory {
   display: flex;
   overflow-x: auto;
   white-space: nowrap;
@@ -151,6 +195,11 @@ i {
 #map {
   border-right: solid 2px gray;
 }
+
+/*
+#sub-hero {
+  
+}*/
 
 
 

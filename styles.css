@@ -61,19 +61,38 @@ nav nav img {
   width: 30px;
   height: 30px;
 }
+nav #logo-small {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+nav #logo-small.visible {
+  opacity: 1;
+}
 
+#hero-section {
+  margin-bottom: 2rem;
+}
 #hero-section h2 {
   font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
-#hero-section #hero-image {
+#hero-section #hero-img {
   margin-top: 10px;
   margin-bottom: 10px;
-  border: solid 4px #dea467;
+  border: solid 2px #8E24AA;
   box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
-  border-radius: 30px 0 30px 0;
+  border-radius: 30px;
 }
-#hero-section h3 {
-  font-size: 1.75rem;
+#hero-section #mission-statement h3 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+#hero-section #mission-statement img {
+  border: solid 2px #8E24AA;
+  box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
+  border-radius: 30px;
 }
 
 @media screen and (max-width: 480px) {
@@ -100,6 +119,11 @@ i.fa-earth-europe {
   color: #1565C0;
 }
 
+.nav-logo {
+  width: 35px;
+  height: 40px;
+}
+
 .social-media {
   position: relative;
   height: 200px;
@@ -118,6 +142,16 @@ i.fa-earth-europe {
   color: #dea467;
 }
 
+#hours-operation {
+  background-image: url(assets/images/weedcookies.png);
+  background-color: rgba(255, 255, 255, 0.6);
+  background-blend-mode: overlay;
+  width: 450px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  font-size: 1.5rem;
+  border-radius: 5%;
+}
+
 .card-item {
   flex: 0 0 250px;
   border: solid 3px #1B5E20;
@@ -126,7 +160,7 @@ i.fa-earth-europe {
   margin: 0.625rem;
 }
 
-#flower, #edibles, #concentrates, #cartridges, #pre-rolls {
+#flower, #edibles, #concentrates, #cartridges, #pre-rolls, #catagory {
   display: flex;
   overflow-x: auto;
   white-space: nowrap;
@@ -136,6 +170,10 @@ i.fa-earth-europe {
   border-right: solid 2px gray;
 }
 
+/*
+#sub-hero {
+
+}*/
 /*
 h1, h2 {
   font-family: $primary-font;

@@ -22,7 +22,21 @@ log();
 
 
 
+window.addEventListener('scroll', function() {
+  const element = document.getElementById('logo-small');
+  const position = element.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
 
+  if (position < windowHeight) {
+    element.classList.add('visible');
+  }
+  if (position > windowHeight) {
+    element.classList.remove('visible');
+    //element.style.opacity = 1;
+  }
+});
+
+/*
 $(document).ready() {
   const settings = {
     "async": true,
@@ -39,4 +53,4 @@ $(document).ready() {
     console.log(response);
   });
 
-};
+};*/
