@@ -1,0 +1,73 @@
+@import "styles/_variables";
+@import "./styles/_styleguide";
+
+@mixin text-shadow {
+  text-shadow: 2px 2px 0 rgba(163, 88, 58, 0.2);
+}
+
+@mixin nice-box-shadow {
+  box-shadow: 
+              0 16px 32px rgba(163, 88, 58, 0.2);
+}
+
+@mixin  header-background {
+  background-image: url(assets/images/weedDewDrop.png);
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  color: $flower-dark;    
+  @include text-shadow();
+  @include header-background();
+      header img {
+        border: 2px solid $terpine-dark;
+        color: $terpine-dark;
+        width: 50px;
+        height: 50px
+      }  
+      h1 {
+        margin-top: 3rem;
+        font-size: 3rem;
+        font-weight: 600;
+        font-family: HighDesert;
+        margin-bottom: 1rem;
+      }
+      #logo {
+        margin-bottom: 1rem;
+        width: 125px;
+        height: 130px;
+      }
+      #empty-navbar {
+        height: 55px;
+        background-color: $flower-medium;
+      }
+    }
+  
+#age-verification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $terpine-light;
+  height: 100vh;
+      .age-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $flower-light;
+        border: solid 3px $terpine-dark;
+        border-radius: 25px 0 25px 0;
+        padding: 3rem;
+            h2 {
+              font-size: 4rem;
+              color: $terpine-dark;
+              @include text-shadow();
+            }
+            button {
+              font-size: 2rem;
+              border: 3px solid $terpine-light;
+            }
+      }
+}

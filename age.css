@@ -1,0 +1,77 @@
+/**
+ * TODO : Font sizing for all bootstrap breakpoints.
+ * TODO : Color pallette mixins, same for shadows, & hovers.
+
+ * ? : ...
+
+ * ! : ...
+*/
+/* color picker */
+/* Colors */
+/* Fonts */
+@font-face {
+  font-family: HighDesert;
+  src: url(assets/fonts/Raleway/Raleway-VariableFont_wght.ttf);
+}
+/* Margins and paddings */
+/* Buttons */
+/* Forms */
+/* Shadows */
+/* pulled a list of popular colors for dispensaries for reference */
+header {
+  color: #677e34;
+  text-shadow: 2px 2px 0 rgba(163, 88, 58, 0.2);
+  background-image: url(assets/images/weedDewDrop.png);
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header header img {
+  border: 2px solid #a3583a;
+  color: #a3583a;
+  width: 50px;
+  height: 50px;
+}
+header h1 {
+  margin-top: 3rem;
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: HighDesert;
+  margin-bottom: 1rem;
+}
+header #logo {
+  margin-bottom: 1rem;
+  width: 125px;
+  height: 130px;
+}
+header #empty-navbar {
+  height: 55px;
+  background-color: #abbe4b;
+}
+
+#age-verification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dea467;
+  height: 100vh;
+}
+#age-verification .age-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #d1df93;
+  border: solid 3px #a3583a;
+  border-radius: 25px 0 25px 0;
+  padding: 3rem;
+}
+#age-verification .age-card h2 {
+  font-size: 4rem;
+  color: #a3583a;
+  text-shadow: 2px 2px 0 rgba(163, 88, 58, 0.2);
+}
+#age-verification .age-card button {
+  font-size: 2rem;
+  border: 3px solid #dea467;
+}/*# sourceMappingURL=age.css.map */
