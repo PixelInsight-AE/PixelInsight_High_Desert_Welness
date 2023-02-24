@@ -87,7 +87,7 @@ header {
       font-size: 2rem;
       margin-top: 2rem;
       margin-bottom: 2rem;
-      font-family: High Desert;
+      font-family: highDesert;
     }
     #hero-img {
       margin-top: 10px;
@@ -102,6 +102,9 @@ header {
         margin-top: 2rem;
         margin-bottom: 2rem;
         font-size: 2rem;
+        font-family: highDesert;
+        text-align: center;
+        
       }
       img {
         border: solid 2px $purple-4;
@@ -109,10 +112,20 @@ header {
         
         border-radius: 30px;
       }
+      i {
+        color: $flower-medium;
+        -webkit-text-stroke: 1px $terpine-light;
+      }
     }
 }
 
 
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  
+}
 
 
 i {
@@ -155,11 +168,11 @@ i {
   border: solid 2px $purple-4;
   padding-left: 1rem;
   background-color: $flower-medium;
-  width: 450px;
+  width: 375px;
   @include shadow-1;
   font-size: 1.5rem;
   border-radius: 10px;
-  
+  margin-bottom: 20px;
   
 }
 
@@ -167,6 +180,8 @@ i {
 .card-item {
   flex: 0 0 250px;
   border: solid 3px $green-1;
+  background-color: $flower-medium;
+
   @include shadow-1;
   border-radius: 10px 0 10px 0;
   margin: $margin-small;
@@ -198,23 +213,111 @@ i {
   }
   
 }
-/*
-#sub-hero {
-  
-}*/
+
+#green-bar {
+  background-color: $flower-medium;
+}
 
 
+// Define variables for carousel dimensions
+$carousel-width: 100%;
+$carousel-height: 300px;
 
+// Define variables for carousel animation duration and delay
+$animation-duration: 7s;
+$animation-delay: 7s;
 
+// Define variables for carousel item dimensions and spacing
+$carousel-item-width: 100%;
+$carousel-item-height: 100%;
+$carousel-item-spacing: 20px;
+$carousel-item-count: 3;
 
+// Define the carousel container
+.carousels {
+  background-color: $flower-medium;
+  width: $carousel-width;
+  height: $carousel-height;
+  overflow: hidden;
+  position: relative;
 
+  // Define the carousel items
+  .carousels-item {
+    width: $carousel-item-width;
+    height: $carousel-item-height;
+    margin-right: $carousel-item-spacing;
+    float: left;
+  }
 
-/*
-h1, h2 {
-  font-family: $primary-font;
-  margin-top: 25px;
-  padding-top: 10px;
-}*/
+  // Define the animation properties for the carousel
+  .carousels-inner {
+    display: flex;
+    width: calc(#{$carousel-item-width} * #{$carousel-item-count});
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
+  // Define the animation for the carousel
+  .carousels-item {
+    &:first-child {
+      animation: slide-first $animation-duration ease-in-out infinite;
+      animation-delay: $animation-delay;
+    }
+    &:nth-child(2) {
+      animation: slide-second $animation-duration ease-in-out infinite;
+      animation-delay: $animation-delay;
+    }
+    &:nth-child(3) {
+      animation: slide-third $animation-duration ease-in-out infinite;
+      animation-delay: $animation-delay;
+    }
+  }
 
- 
+  // Define the animation keyframes for each item
+  @keyframes
+   {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-3 * (#{$carousel-item-width} + #{$carousel-item-spacing})));
+    }
+  }
+  @keyframes slide-second {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-3 * (#{$carousel-item-width} + #{$carousel-item-spacing})));
+    }
+  }
+  @keyframes slide-third {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-3 * (#{$carousel-item-width} + #{$carousel-item-spacing})));
+    }
+  }
+
+  // Define the navigation buttons for the carousel
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  .carousel-control-prev {
+    left: 0;
+  }
+
+  .carousel-control-next {
+    right: 0;
+  }
+}
+
+.carousel-img {
+  height: 300px;
+}
