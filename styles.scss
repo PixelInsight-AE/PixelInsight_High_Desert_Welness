@@ -275,14 +275,13 @@ $carousel-item-count: 3;
   }
 
   // Define the animation keyframes for each item
-  @keyframes
-   {
+  @keyframes slide-first {
     0% {
       transform: translateX(0);
     }
     100% {
       transform: translateX(calc(-3 * (#{$carousel-item-width} + #{$carousel-item-spacing})));
-    }
+    } 
   }
   @keyframes slide-second {
     0% {

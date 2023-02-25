@@ -220,7 +220,7 @@ i.fa-earth-europe {
   animation: slide-third 7s ease-in-out infinite;
   animation-delay: 7s;
 }
-@keyframes {
+@keyframes slide-first {
   0% {
     transform: translateX(0);
   }
