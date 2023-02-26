@@ -1,9 +1,9 @@
 /**
- * TODO : First fun task IMO would be to define the styleGuide.
- 
- * ? : I was thinking maybe a light and dark for primary, and a color palette comprised of the rasta colors. Maybe different accent colors for buttons etc. 
+* TODO : First fun task IMO would be to define the styleGuide.
 
- * ! We should each have our own branch per section before we actually build anything.
+* ? : I was thinking maybe a light and dark for primary, and a color palette comprised of the rasta colors. Maybe different accent colors for buttons etc. 
+
+* ! We should each have our own branch per section before we actually build anything.
 */
 
 @import "styles/_variables";
@@ -22,7 +22,7 @@
 
 @mixin nice-box-shadow {
   box-shadow: 
-              0 16px 32px rgba(163, 88, 58, 0.2);
+  0 16px 32px rgba(163, 88, 58, 0.2);
 }
 
 @mixin  header-background {
@@ -34,6 +34,12 @@
 }
 
 
+@keyframes shake {
+  0% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
 
 
 header {
@@ -58,76 +64,124 @@ header {
         width: 125px;
         height: 130px;
       }
-    }
-    
-    nav {
-      background-color: $flower-medium; 
-      @include nice-box-shadow();
-      nav img {
-        width: 30px;
-        height: 30px;
-        //padding-right: px;
-      }
-      #logo-small {
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-      }
-      
-      #logo-small.visible {
-        opacity: 1;
-      }
-      
-      
-    }
-    
+          
+          
+}
 
-#hero-section {
-  margin-bottom: 2rem;
-    h2 {
+
+nav {
+  background-color: $flower-medium; 
+  @include nice-box-shadow();
+  nav img {
+    width: 30px;
+    height: 30px;
+    //padding-right: px;
+  }
+  #logo-small {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  #logo-small.visible {
+    opacity: 1;
+  }
+  
+  
+}
+
+// hero-header
+#hero-header {
+  background-image: url(assets/images/Bud-1.png);
+  //background-color: rgba(255, 255, 255, 0.2);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+    
+      font-weight: 500;
       font-size: 2rem;
       margin-top: 2rem;
       margin-bottom: 2rem;
       font-family: highDesert;
-    }
+    
+          #cultivating {
+            color: $flower-dark;
+          }
+    
+          #heat {
+            background: linear-gradient(to top, #ff4500, #ff8c00, #ffd700, #ffff00);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            -webkit-text-stroke: 0.5px $terpine-dark;
+          }
+          
+          #new-mexico {
+            color: $flower-medium;
+            -webkit-text-stroke: 0.25px $terpine-dark;
+          }
+    
+}
+    
+#hero-section {
+margin-bottom: 2rem;
     #hero-img {
-      margin-top: 10px;
-      margin-bottom: 10px;
-      border: solid 2px $purple-4;
+      margin: 0;
+      border: solid 4px $terpine-light;
+      border-right: none;
       @include nice-box-shadow();
       
-      border-radius: 30px;
+      border-radius: 30px 0 0 30px;
     }
     #mission-statement {
-      h3 {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        font-size: 2rem;
-        font-family: highDesert;
-        text-align: center;
-        
-      }
-      img {
-        border: solid 2px $purple-4;
-        @include nice-box-shadow();
-        
-        border-radius: 30px;
-      }
-      i {
-        color: $flower-medium;
-        -webkit-text-stroke: 1px $terpine-light;
-      }
+      background-color: $flower-medium;
+      border: solid 4px $terpine-light;
+      border-left: none;
+      @include nice-box-shadow();
+      margin: 0;
+      font-family: highDesert;
+      
+      border-radius: 0 30px 30px 0;
+          // hr {
+          //   border: solid 3px $terpine-dark;
+          // }
+          h3 {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            
+            text-align: center;
+            
+            
+          }
+          img {
+            border: solid 2px $purple-4;
+            @include nice-box-shadow();
+            
+            border-radius: 30px;
+          }
+          i {
+            color: $terpine-dark;
+            -webkit-text-stroke: 1px $flower-light;
+          }
     }
 }
-
-
-
+    
+  
+.sub-hero {
+  font-family: highDesert;
+  text-align: center;
+}
+    
 .table-container {
   display: flex;
   flex-direction: column;
   
 }
-
-
+    
+    
+    
 i {
   &.fa-leaf {
     color: $flower-medium;

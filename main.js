@@ -22,14 +22,24 @@ log();
 
 
 
+// When the user scrolls the page, execute myFunction
 window.addEventListener('scroll', function() {
+
+  // Get the logo-small element
   const element = document.getElementById('logo-small');
+
+  // Get the position of the logo-small element
   const position = element.getBoundingClientRect().top;
+
+  // Get the height of the window
   const windowHeight = window.innerHeight;
 
+  // If the logo-small element is in the window, add the visible class
   if (position < windowHeight) {
     element.classList.add('visible');
   }
+
+  // If the logo-small element is not in the window, remove the visible class
   if (position > windowHeight) {
     element.classList.remove('visible');
     //element.style.opacity = 1;
