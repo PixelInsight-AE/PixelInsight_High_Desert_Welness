@@ -205,15 +205,30 @@ i.fa-earth-europe {
   color: #dea467;
 }
 
+#location-icon {
+  position: relative;
+}
+#location-icon i {
+  position: absolute;
+  right: 0;
+  top: 0.5;
+}
+
 #hours-operation {
-  border: solid 2px #8E24AA;
   padding-left: 1rem;
-  background-color: #abbe4b;
-  width: 375px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  width: auto;
+  height: auto;
   font-size: 1.5rem;
   border-radius: 10px;
   margin-bottom: 20px;
+  color: #d1df93;
+}
+#hours-operation caption {
+  color: #d1df93;
+}
+#hours-operation i {
+  color: #a3583a;
+  -webkit-text-stroke: 1px #d1df93;
 }
 
 .card-item {
@@ -247,6 +262,7 @@ i.fa-earth-europe {
   background-color: #abbe4b;
   width: 100%;
   height: 400px;
+  margin-bottom: 3rem;
 }
 #carousels h2 {
   font-size: 2rem;
@@ -288,12 +304,31 @@ i.fa-earth-europe {
   background-color: #dea467;
 }
 
+#medical {
+  position: relative;
+}
+#medical i {
+  position: absolute;
+  bottom: 0.5;
+  right: 0;
+}
+
+.medical-text {
+  text-align: right;
+  font-family: highDesert;
+  font-size: 1rem;
+}
+
 #location {
   text-align: right;
+  font-family: highDesert;
+  font-size: 1rem;
 }
 
 #sustainable {
   text-align: left;
+  font-family: highDesert;
+  font-size: 1rem;
 }
 
 #example {
@@ -320,10 +355,18 @@ i.fa-earth-europe {
   height: 150px;
 }
 
+#footer-background {
+  background-image: url(assets/images/weedDewDrop.png);
+  background-color: rgba(13, 13, 13, 0.7);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+}
+
 footer {
-  background-color: #424242;
   padding: 1rem;
-  margin-top: 2rem;
+  margin-top: 0;
   border-top: solid 4px #dea467;
   box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
   font-family: highDesert;
@@ -333,6 +376,48 @@ footer {
 }
 footer a {
   color: #a3583a;
+}
+footer p {
+  margin-top: 4rem;
+  color: #757575;
+  font-size: 12px;
+}
+footer h3 {
+  color: #abbe4b;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+footer .form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+footer .form-group input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  width: 100%;
+}
+footer .form-group input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #ccc;
+}
+footer .form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+footer .submit-btn {
+  padding: 10px 20px;
+  background-color: #abbe4b;
+  color: #6a1b9a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+footer .submit-btn:hover {
+  background-color: #0069d9;
 }
 
 @media screen and (max-width: 480px) {
