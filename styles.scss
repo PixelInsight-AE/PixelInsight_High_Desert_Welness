@@ -46,7 +46,7 @@ header {
   color: $flower-dark;    
   @include text-shadow();
   @include header-background();
-      header img {
+      header img { 
         border: 2px solid $terpine-dark;
         color: $terpine-dark;
         width: 50px;
@@ -270,6 +270,74 @@ i {
   border-right: solid 2px gray;
 }
 
+
+#green-bar {
+  background-color: $flower-medium;
+}
+
+
+
+
+//Carousel
+#carousels {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $flower-medium;
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      color: $flower-dark;
+    }
+    .carousels-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: scroll;
+      width: 100%;
+      height: 100%;
+
+        .category {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+
+          width: 300px;
+          height: 300px;
+
+          padding: 1rem;
+          margin: 1rem 1rem 2rem 1rem;
+          border: solid 4px $terpine-light;
+          border-radius: 50%;
+          @include nice-box-shadow();
+          background-color: $terpine-light;
+          
+        }
+    }
+}
+
+
+footer {
+  background-color: $gray-2;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-top: solid 4px $terpine-light;
+  border-bottom: solid 4px $terpine-light;
+  @include nice-box-shadow();
+  font-family: highDesert;
+  font-size: 1.5rem;
+  text-align: center;
+  color: $green-4;
+  a {
+    color: $terpine-dark;
+  }
+}
+
+
 @media screen and (max-width: 480px) {
   #brand-img {
     border: 1px solid $terpine-light;
@@ -285,111 +353,4 @@ i {
     }
   }
   
-}
-
-#green-bar {
-  background-color: $flower-medium;
-}
-
-
-// Define variables for carousel dimensions
-$carousel-width: 100%;
-$carousel-height: 300px;
-
-// Define variables for carousel animation duration and delay
-$animation-duration: 7s;
-$animation-delay: 7s;
-
-// Define variables for carousel item dimensions and spacing
-$carousel-item-width: 100%;
-$carousel-item-height: 100%;
-$carousel-item-spacing: 20px;
-$carousel-item-count: 3;
-
-// Define the carousel container
-.carousels {
-  background-color: $flower-medium;
-  width: $carousel-width;
-  height: $carousel-height;
-  overflow: hidden;
-  position: relative;
-
-  // Define the carousel items
-  .carousels-item {
-    width: $carousel-item-width;
-    height: $carousel-item-height;
-    margin-right: $carousel-item-spacing;
-    float: left;
-  }
-
-  // Define the animation properties for the carousel
-  .carousels-inner {
-    display: flex;
-    width: calc(#{$carousel-item-width} * #{$carousel-item-count});
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  // Define the animation for the carousel
-  .carousels-item {
-    &:first-child {
-      animation: slide-first $animation-duration ease-in-out infinite;
-      animation-delay: $animation-delay;
-    }
-    &:nth-child(2) {
-      animation: slide-second $animation-duration ease-in-out infinite;
-      animation-delay: $animation-delay;
-    }
-    &:nth-child(3) {
-      animation: slide-third $animation-duration ease-in-out infinite;
-      animation-delay: $animation-delay;
-    }
-  }
-
-  // Define the animation keyframes for each item
-  @keyframes slide-first {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-3 * (#{$carousel-item-width} + #{$carousel-item-spacing})));
-    } 
-  }
-  @keyframes slide-second {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-3 * (#{$carousel-item-width} + #{$carousel-item-spacing})));
-    }
-  }
-  @keyframes slide-third {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-3 * (#{$carousel-item-width} + #{$carousel-item-spacing})));
-    }
-  }
-
-  // Define the navigation buttons for the carousel
-  .carousel-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-  }
-
-  .carousel-control-prev {
-    left: 0;
-  }
-
-  .carousel-control-next {
-    right: 0;
-  }
-}
-
-.carousel-img {
-  height: 300px;
 }

@@ -235,6 +235,63 @@ i.fa-earth-europe {
   border-right: solid 2px gray;
 }
 
+#green-bar {
+  background-color: #abbe4b;
+}
+
+#carousels {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #abbe4b;
+}
+#carousels h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: #677e34;
+}
+#carousels .carousels-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+  width: 100%;
+  height: 100%;
+}
+#carousels .carousels-inner .category {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  padding: 1rem;
+  margin: 1rem 1rem 2rem 1rem;
+  border: solid 4px #dea467;
+  border-radius: 50%;
+  box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
+  background-color: #dea467;
+}
+
+footer {
+  background-color: #424242;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-top: solid 4px #dea467;
+  border-bottom: solid 4px #dea467;
+  box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
+  font-family: highDesert;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #43A047;
+}
+footer a {
+  color: #a3583a;
+}
+
 @media screen and (max-width: 480px) {
   #brand-img {
     border: 1px solid #dea467;
@@ -248,80 +305,4 @@ i.fa-earth-europe {
   nav .navbar-toggler {
     background-color: #d1df93;
   }
-}
-#green-bar {
-  background-color: #abbe4b;
-}
-
-.carousels {
-  background-color: #abbe4b;
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-  position: relative;
-}
-.carousels .carousels-item {
-  width: 100%;
-  height: 100%;
-  margin-right: 20px;
-  float: left;
-}
-.carousels .carousels-inner {
-  display: flex;
-  width: calc(100% * 3);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.carousels .carousels-item:first-child {
-  animation: slide-first 7s ease-in-out infinite;
-  animation-delay: 7s;
-}
-.carousels .carousels-item:nth-child(2) {
-  animation: slide-second 7s ease-in-out infinite;
-  animation-delay: 7s;
-}
-.carousels .carousels-item:nth-child(3) {
-  animation: slide-third 7s ease-in-out infinite;
-  animation-delay: 7s;
-}
-@keyframes slide-first {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-3 * (100% + 20px)));
-  }
-}
-@keyframes slide-second {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-3 * (100% + 20px)));
-  }
-}
-@keyframes slide-third {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-3 * (100% + 20px)));
-  }
-}
-.carousels .carousel-control {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-}
-.carousels .carousel-control-prev {
-  left: 0;
-}
-.carousels .carousel-control-next {
-  right: 0;
-}
-
-.carousel-img {
-  height: 300px;
 }/*# sourceMappingURL=styles.css.map */
