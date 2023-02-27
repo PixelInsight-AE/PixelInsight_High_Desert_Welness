@@ -100,6 +100,17 @@ nav {
   padding-top: 1rem;
 }
 
+#second-background {
+  background-image: url(assets/images/weeeeeeeeeeed.png);
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  padding-top: 2rem;
+  height: 100%;
+}
+
 // hero-header
 #hero-header {
   
@@ -309,7 +320,7 @@ i {
   background-color: $flower-medium;
   width: 100%;
   height: 400px;
-  margin-bottom: 3rem;
+  padding-bottom: 1rem;
   h2 {
     font-size: 2rem;
     font-weight: 600;
@@ -341,6 +352,8 @@ i {
   @include nice-box-shadow();
   background-color: #f3f3f3;
   text-align: center;
+  transition: all ease-in-out 0.5s;
+
   h3 {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -352,8 +365,14 @@ i {
     @include nice-box-shadow();
     background-color: $terpine-light; 
   }
-
+  &:hover {
+    background-color: $flower-dark;
+    border: solid 4px $purple-4;
+    @include nice-box-shadow();
+    transform: scale(1.115);
+  }
 }
+
 #medical {
   position: relative;
   i {
