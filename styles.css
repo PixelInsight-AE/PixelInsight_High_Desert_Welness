@@ -242,38 +242,82 @@ i.fa-earth-europe {
 #carousels {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background-color: #abbe4b;
+  width: 100%;
+  height: 400px;
 }
 #carousels h2 {
   font-size: 2rem;
   font-weight: 600;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  color: #677e34;
+  color: #6A1B9A;
 }
-#carousels .carousels-inner {
+
+.carousels-inner {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: scroll;
   width: 100%;
   height: 100%;
+  overflow-y: hidden;
 }
-#carousels .carousels-inner .category {
-  display: flex;
+
+.category {
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  width: 300px;
-  height: 300px;
+  width: 275px;
+  height: 275px;
   padding: 1rem;
   margin: 1rem 1rem 2rem 1rem;
-  border: solid 4px #dea467;
+  border: solid 4px #8E24AA;
   border-radius: 50%;
   box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
+  background-color: #f3f3f3;
+  text-align: center;
+}
+.category h3 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-family: highDesert;
+  color: #6A1B9A;
+  font-weight: 400;
+  border: 1px solid #6a1b9a;
+  border-radius: 10px;
+  box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
   background-color: #dea467;
+}
+
+#location {
+  text-align: right;
+}
+
+#sustainable {
+  text-align: left;
+}
+
+#example {
+  background-color: #abbe4b;
+  border: none;
+}
+
+.category-img {
+  height: 230px;
+  width: 230px;
+}
+
+.shop {
+  margin: 0;
+  padding: 3rem;
+  text-align: center;
+  font-size: 2rem;
+  font-family: highDesert;
+  font-weight: 600;
+  color: #a3583a;
+}
+
+.scroll-buttons {
+  height: 150px;
 }
 
 footer {
@@ -281,7 +325,6 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
   border-top: solid 4px #dea467;
-  border-bottom: solid 4px #dea467;
   box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
   font-family: highDesert;
   font-size: 1.5rem;

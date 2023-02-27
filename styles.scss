@@ -279,54 +279,103 @@ i {
 
 
 //Carousel
+
+
+
 #carousels {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background-color: $flower-medium;
-    h2 {
-      font-size: 2rem;
-      font-weight: 600;
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-      color: $flower-dark;
-    }
-    .carousels-inner {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: scroll;
-      width: 100%;
-      height: 100%;
-
-        .category {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          align-items: center;
-
-          width: 300px;
-          height: 300px;
-
-          padding: 1rem;
-          margin: 1rem 1rem 2rem 1rem;
-          border: solid 4px $terpine-light;
-          border-radius: 50%;
-          @include nice-box-shadow();
-          background-color: $terpine-light;
-          
-        }
-    }
+  width: 100%;
+  height: 400px;
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    //padding-top: 2rem;
+    //margin-top: 2rem;
+    //margin-bottom: 2rem;
+    color: $purple-2;
+  }
 }
+.carousels-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%; 
+  //overflow-x: scroll;
+  overflow-y: hidden;
+}
+.category {
+  
+  flex-direction: column;
+  justify-content: space-between;
+  width: 275px;
+  height: 275px;
+  padding: 1rem;
+  margin: 1rem 1rem 2rem 1rem;
+  border: solid 4px $purple-4;
+  border-radius: 50%;
+  @include nice-box-shadow();
+  background-color: #f3f3f3;
+  text-align: center;
+  h3 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-family: highDesert;
+    color: $purple-2;
+    font-weight: 400;
+    border: 1px solid rgba($color: $purple-2, $alpha: 1.0);
+    border-radius: 10px;
+    @include nice-box-shadow();
+    background-color: $terpine-light; 
+  }
+
+}
+
+#location {
+  text-align: right;
+}
+
+#sustainable {
+  text-align: left;
+}
+
+#example {
+  background-color: $flower-medium;
+  border: none;
+}
+
+.category-img {
+  height: 230px;
+  width: 230px;
+}
+
+.shop {
+  margin: 0;
+  padding: 3rem;
+  text-align: center;
+  font-size: 2rem;
+  font-family: highDesert;
+  font-weight: 600;
+  color : $terpine-dark;
+}
+
+.scroll-buttons {
+  height: 150px;
+
+}
+
 
 
 footer {
   background-color: $gray-2;
   padding: 1rem;
   margin-top: 2rem;
-  border-top: solid 4px $terpine-light;
-  border-bottom: solid 4px $terpine-light;
+  border-top: solid 4px $terpine-light;  
+  //border-bottom: solid 4px $terpine-light;
   @include nice-box-shadow();
   font-family: highDesert;
   font-size: 1.5rem;
