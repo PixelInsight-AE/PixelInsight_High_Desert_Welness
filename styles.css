@@ -30,10 +30,10 @@
     transform: translateX(0);
   }
   10%, 30%, 50%, 70%, 90% {
-    transform: translateX(-5px);
+    transform: translateX(-1px);
   }
   20%, 40%, 60%, 80% {
-    transform: translateX(5px);
+    transform: translateX(1px);
   }
   100% {
     transform: translateX(0);
@@ -83,28 +83,37 @@ nav #logo-small.visible {
   opacity: 1;
 }
 
-#hero-header {
-  background-image: url(assets/images/Bud-1.png);
+#desert-background {
+  background-image: url(assets/images/desertBackground.jpg);
+  background-color: rgba(255, 255, 255, 0.8);
   background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
+  background-position: center;
+  padding-top: 1rem;
+}
+
+#hero-header {
   font-weight: 500;
   font-size: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   font-family: highDesert;
 }
 #hero-header #cultivating {
   color: #677e34;
 }
 #hero-header #heat {
+  display: inline-block;
   background: linear-gradient(to top, #ff4500, #ff8c00, #ffd700, #ffff00);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   -webkit-text-stroke: 0.5px #a3583a;
+}
+#hero-header #heat:hover {
+  animation: shake 2s;
+  animation-iteration-count: infinite;
 }
 #hero-header #new-mexico {
   color: #abbe4b;
@@ -149,6 +158,13 @@ nav #logo-small.visible {
 .sub-hero {
   font-family: highDesert;
   text-align: center;
+}
+.sub-hero h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: #677e34;
 }
 
 .table-container {
