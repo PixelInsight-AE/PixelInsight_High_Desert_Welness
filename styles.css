@@ -265,6 +265,34 @@ i.fa-earth-europe {
   background-color: #abbe4b;
 }
 
+.carousel {
+  padding-top: 20px;
+  width: 100%;
+  overflow: hidden;
+  height: 450px;
+  position: relative;
+}
+
+.carousel ul {
+  position: relative;
+  list-style: none;
+  list-style-type: none;
+  margin: 2rem;
+  height: 50px;
+  padding: 1rem;
+}
+
+.carousel ul li {
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  margin: 1rem;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding-top: 25px;
+}
+
 #carousels {
   display: flex;
   flex-direction: column;

@@ -52,73 +52,66 @@ $('#category-5').hide();
 $('#category-6').hide();
 
 
-// $('#example').click(function() {
-//   $('#category-4').show();
-//   $('#category-5').show();
-//   $('#category-6').show();
 
-//   $('#category-1').hide();
-//   $('#category-2').hide();
-//   $('#category-3').hide();
-// });
-/*
-$('document').ready(function() {
-  $('#example').click(function() {
-    //$(`#category-${categorys[i]}`).show();
-    //$('#category-${cat}`).hide();
-    
-    const categorys = ['Flower', 'Edible', 'Concentrates', 'Cartridges', 'Topical', 'Pre-Rolls'];
 
-    for (let i = 0; i < categorys.length; i++) {
-      if (categorys[i] > categorys.length) {
-        i = 0;
-      } else {
-       
-        $(`category-${categorys[i]}`).slideToggle("slow", function() {
-          // Animation complete.
+$(function(){
+  var carousel = $('.carousel ul');
+  var carouselChild = carousel.find('li');
+  var clickCount = 0;
+  var canClick = true;
+
+  itemWidth = carousel.find('li:first').width()+1; //Including margin
+
+  //Set Carousel width so it won't wrap
+  carousel.width(itemWidth*carouselChild.length);
+
+  //Place the child elements to their original locations.
+  refreshChildPosition();
+
+  //Set the event handlers for buttons.
+  $('.btnNext').click(function(){
+      if(canClick){
+          canClick = false;
+          clickCount++;
+
+          //Animate the slider to left as item width 
+          carousel.stop(false, true).animate({
+              left : '-='+itemWidth
+          },1000, function(){
+              //Find the first item and append it as the last item.
+              lastItem = carousel.find('li:first');
+              lastItem.remove().appendTo(carousel);
+              lastItem.css('left', ((carouselChild.length-1)*(itemWidth))+(clickCount*itemWidth));
+              canClick = true;
           });
-        console.log(categorys[i]);
-
-
       }
+  });
+
+  $('.btnPrevious').click(function(){
+      if(canClick){
+          canClick = false;
+          clickCount--;
+          //Find the first item and append it as the last item.
+          lastItem = carousel.find('li:last');
+          lastItem.remove().prependTo(carousel);
+
+          lastItem.css('left', itemWidth*clickCount);             
+          //Animate the slider to right as item width 
+          carousel.finish(true).animate({
+              left: '+='+itemWidth
+          },1000, function(){
+              canClick = true;
+          });
       }
-    });
-
-});
-*/
-
-
-$(document).ready(function() {
-  const categories = ['1', '2', '3', '4', '5', '6'];
-  let currentCategory = 0;
-
-  $('#example').click(function() {
-    const nextCategory = (currentCategory + 1); 
-
-    $(`#category-${categories[currentCategory]}`).hide();
-    $(`#category-${categories[nextCategory]}`).show();
-
-    currentCategory = nextCategory;
   });
+
+  function refreshChildPosition(){
+      carouselChild.each(function(){
+          $(this).css('left', itemWidth*carouselChild.index($(this)));
+      });
+  }
 });
 
-
-$('.test-button').click()
-
-$(document).ready(function() {
-  const categories = ['1', '2', '3', '4', '5', '6'];
-  let currentCategory = 0;
-
-  $('#example').click(function() {
-    const nextCategory = (currentCategory + 3) % categories.length;
-    const prevCategory = (currentCategory - 1 + categories.length) % categories.length;
-    const nextNextCategory = (currentCategory + 4) % categories.length;
-
-    $(`#category-${categories[prevCategory]}`).hide();
-    $(`#category-${categories[currentCategory]}`).hide();
-    $(`#category-${categories[nextCategory]}`).show();
-    //$(`#category-${categories[nextNextCategory]}`).show();
-
-    currentCategory = nextCategory;
-  });
-});
+setInterval(() => {
+  $('.btnNext').click();
+}, 3500);
