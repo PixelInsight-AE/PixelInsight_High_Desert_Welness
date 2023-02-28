@@ -59,8 +59,11 @@ $(function(){
   var carouselChild = carousel.find('li');
   var clickCount = 0;
   var canClick = true;
+  var intervalId = null; // needed a check for each click
 
-  itemWidth = carousel.find('li:first').width()+1; //Including margin
+  //itemWidth = carousel.find('li:first').width()+1; //Including margin
+  itemWidth = 350;
+  console.log(`itemWidth: ${itemWidth}`)
 
   //Set Carousel width so it won't wrap
   carousel.width(itemWidth*carouselChild.length);
@@ -70,48 +73,68 @@ $(function(){
 
   //Set the event handlers for buttons.
   $('.btnNext').click(function(){
-      if(canClick){
-          canClick = false;
-          clickCount++;
+    clearInterval(intervalId); // Clear the interval
+    intervalId = setInterval(function() {
+      $('.btnNext').click();
+    }, 3500);
 
-          //Animate the slider to left as item width 
-          carousel.stop(false, true).animate({
-              left : '-='+itemWidth
-          },1000, function(){
-              //Find the first item and append it as the last item.
-              lastItem = carousel.find('li:first');
-              lastItem.remove().appendTo(carousel);
-              lastItem.css('left', ((carouselChild.length-1)*(itemWidth))+(clickCount*itemWidth));
-              canClick = true;
-          });
-      }
+    if(canClick){
+      canClick = false;
+      clickCount++;
+
+      //Animate the slider to left as item width 
+      carousel.stop(false, true).animate({
+          left : '-='+itemWidth
+      },1000, function(){
+          //Find the first item and append it as the last item.
+          lastItem = carousel.find('li:first');
+          lastItem.remove().appendTo(carousel);
+          lastItem.css('left', ((carouselChild.length-1)*(itemWidth))+(clickCount*itemWidth));
+          canClick = true;
+      });
+    }
   });
 
   $('.btnPrevious').click(function(){
-      if(canClick){
-          canClick = false;
-          clickCount--;
-          //Find the first item and append it as the last item.
-          lastItem = carousel.find('li:last');
-          lastItem.remove().prependTo(carousel);
+    clearInterval(intervalId); // Clear the interval
+    intervalId = setInterval(function() {
+      $('.btnPrevious').click();
+    }, 3500);
 
-          lastItem.css('left', itemWidth*clickCount);             
-          //Animate the slider to right as item width 
-          carousel.finish(true).animate({
-              left: '+='+itemWidth
-          },1000, function(){
-              canClick = true;
-          });
-      }
+    if(canClick){
+      canClick = false;
+      clickCount--;
+      //Find the first item and append it as the last item.
+      lastItem = carousel.find('li:last');
+      lastItem.remove().prependTo(carousel);
+
+      lastItem.css('left', itemWidth*clickCount);             
+      //Animate the slider to right as item width 
+      carousel.finish(true).animate({
+          left: '+='+itemWidth
+      },1000, function(){
+          canClick = true;
+      });
+    }
   });
 
   function refreshChildPosition(){
-      carouselChild.each(function(){
-          $(this).css('left', itemWidth*carouselChild.index($(this)));
-      });
+    carouselChild.each(function(){
+      $(this).css('left', itemWidth*carouselChild.index($(this)));
+    });
   }
 });
 
-setInterval(() => {
-  $('.btnNext').click();
-}, 3500);
+
+    
+    /* setInterval(() => {
+      $('.btnNext').click();
+    }, 3500); */
+    
+/*     var nextInterval = setInterval(() => {
+      $('.btnNext').click();
+    }, 3500);
+
+    var previousInterval = setInterval(() => {
+      $('.btnPrevious').click();
+    }, 3500); */

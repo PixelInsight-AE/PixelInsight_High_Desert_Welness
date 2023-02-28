@@ -88,8 +88,20 @@ nav {
   
   
 }
-
-
+.dropdown-menu {
+  background-color: $flower-medium;
+  border: solid 2px $terpine-dark;
+  @include nice-box-shadow();
+  a {
+    color: $terpine-dark;
+    font-weight: 600;
+    font-size: 1.5rem;
+    font-family: highDesert;
+  }
+  a:hover {
+    color: $terpine-light;
+  }
+}
 #desert-background {
   background-image: url(assets/images/desertBackground.jpg);
   background-color: rgba(255, 255, 255, 0.8);
@@ -342,7 +354,8 @@ i {
 
 
 .carousel{
-  padding-top: 20px;
+  background-color: $flower-medium;
+  //padding-top: 20px;
   width: 100%;
   overflow: hidden;
   height: 450px;
@@ -351,8 +364,8 @@ i {
   position: relative;
   list-style: none;
   list-style-type: none;
-  margin: 2rem;
-  height: 50px;
+  //margin: 2rem;
+  height: 250px;
   padding: 1rem;
 }.carousel ul li{
   position: absolute;
@@ -374,10 +387,12 @@ i {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  //background-image: url('./assets/images/weedDewDrop.png');
+  //background-size: cover;
   background-color: $flower-medium;
   width: 100%;
   height: 400px;
-  padding-bottom: 1rem;
+  //padding-bottom: 1rem; 
   h2 {
     font-size: 2rem;
     font-weight: 600;
@@ -403,7 +418,7 @@ i {
   width: 275px;
   height: 275px;
   padding: 1rem;
-  margin: 1rem 1rem 2rem 1rem;
+  margin: 1rem 1rem rem 1rem;
   border: solid 4px $purple-4;
   border-radius: 50%;
   @include nice-box-shadow();
@@ -423,10 +438,17 @@ i {
     background-color: $terpine-light; 
   }
   &:hover {
-    background-color: $flower-dark;
+    //background-color: orange;
     border: solid 4px $purple-4;
     @include nice-box-shadow();
     transform: scale(1.115);
+    h3 {
+      background-color: $terpine-light; 
+      color: $purple-2;
+      border: 1px solid rgba($color: $purple-2, $alpha: 1.0);
+      border-radius: 10px;
+      @include nice-box-shadow();
+    }
   }
 }
 
@@ -557,6 +579,68 @@ footer {
 }
 
 
+.shop-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  //@include nice-box-shadow();
+  
+  //
+
+  //$flower-medium rgba
+  
+
+  background-color: $flower-medium;
+    .shop-card {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 600px;
+      height: 300px;
+      margin: 1rem;
+      padding: 1rem;
+      border: solid 4px $purple-4;
+      border-radius: 5%;
+      //@include nice-box-shadow();
+      background-color: #f3f3f3;
+      text-align: center;
+      transition: all ease-in-out 0.5s;
+      h3 {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        font-family: highDesert;
+        color: $purple-2;
+        font-weight: 400;
+        border: 1px solid rgba($color: $purple-2, $alpha: 1.0);
+        border-radius: 10px;
+        @include nice-box-shadow();
+        background-color: $terpine-light; 
+      }
+      &:hover {
+        //background-color: orange;
+        border: solid 4px $purple-4;
+        @include nice-box-shadow();
+        transform: scale(1.115);
+        h3 {
+          background-color: $terpine-light; 
+          color: $purple-2;
+          border: 1px solid rgba($color: $purple-2, $alpha: 1.0);
+          border-radius: 10px;
+          @include nice-box-shadow();
+        }
+      }
+      .shop-img {
+
+        height: 250px;
+        width: 250px;
+      }
+    }
+}
+
+
+
 
 @media screen and (max-width: 480px) {
   #brand-img {
@@ -574,3 +658,4 @@ footer {
   }
   
 }
+
