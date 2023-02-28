@@ -280,6 +280,38 @@ i.fa-earth-europe {
   background-color: #abbe4b;
 }
 
+.carousel-btn {
+  position: absolute;
+}
+
+.previous-btn:hover {
+  opacity: 1;
+}
+
+.next-btn:hover {
+  opacity: 1;
+}
+
+.previous-btn {
+  left: 0;
+  margin-top: 140px;
+  background-color: rgba(171, 190, 75, 0);
+  z-index: 2;
+  border: none;
+  color: #8E24AA;
+  opacity: 0.5;
+}
+
+.next-btn {
+  right: 0;
+  z-index: 2;
+  margin-top: 140px;
+  background-color: rgba(171, 190, 75, 0);
+  border: none;
+  color: #8E24AA;
+  opacity: 0.5;
+}
+
 .carousel {
   background-color: #abbe4b;
   width: 100%;
@@ -344,6 +376,7 @@ i.fa-earth-europe {
   background-color: #f3f3f3;
   text-align: center;
   transition: all ease-in-out 0.5s;
+  filter: blur(1px);
 }
 .category h3 {
   margin-top: 2rem;
@@ -360,6 +393,7 @@ i.fa-earth-europe {
   border: solid 4px #8E24AA;
   box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
   transform: scale(1.115);
+  filter: blur(0px);
 }
 .category:hover h3 {
   background-color: #dea467;

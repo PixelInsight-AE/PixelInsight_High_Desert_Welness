@@ -52,6 +52,7 @@ $('#category-5').hide();
 $('#category-6').hide();
 
 
+var intervalId = null; // needed a check for each click
 
 
 $(function(){
@@ -59,7 +60,6 @@ $(function(){
   var carouselChild = carousel.find('li');
   var clickCount = 0;
   var canClick = true;
-  var intervalId = null; // needed a check for each click
 
   //itemWidth = carousel.find('li:first').width()+1; //Including margin
   itemWidth = 350;
@@ -94,12 +94,20 @@ $(function(){
       });
     }
   });
-
+  let intervalId;
+  $('.category').hover(function() {
+    console.log("hovered");
+    clearInterval(intervalId);
+  });
   $('.btnPrevious').click(function(){
     clearInterval(intervalId); // Clear the interval
     intervalId = setInterval(function() {
       $('.btnPrevious').click();
     }, 3500);
+   
+    
+
+
 
     if(canClick){
       canClick = false;
@@ -126,15 +134,4 @@ $(function(){
 });
 
 
-    
-    /* setInterval(() => {
-      $('.btnNext').click();
-    }, 3500); */
-    
-/*     var nextInterval = setInterval(() => {
-      $('.btnNext').click();
-    }, 3500);
 
-    var previousInterval = setInterval(() => {
-      $('.btnPrevious').click();
-    }, 3500); */
