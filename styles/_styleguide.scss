@@ -145,6 +145,13 @@ $pink-1: pink;
   0 16px 32px rgba(163, 88, 58, 0.2);
 }
 
+@mixin dropDownNavBar {
+  position: absolute;
+  color: $flower-medium;
+  -webkit-text-stroke: 1px $terpine-dark;
+  
+}
+
 @mixin  header-background {
   background-image: url(assets/images/weedDewDrop.png);
   background-color: rgba(255, 255, 255, 0.8);
@@ -154,7 +161,7 @@ $pink-1: pink;
 }
 
 @mixin backgound-img {
-  background-color: rgba(255, 255, 255, 0.8);
+  
   background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-size: cover;

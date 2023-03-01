@@ -131,3 +131,15 @@ $(function(){
 
 
 
+// function checkAgeVerification() {
+//   // Check if the user has already verified their age
+//   const ageVerified = localStorage.getItem('ageVerified');
+
+//   if (!ageVerified) {
+//     // If the user hasn't verified their age, redirect to the age verification page
+//     window.location.href = 'age-verification.html';
+//   }
+// }
+
+// // Call the checkAgeVerification function when the homepage loads
+// window.onload = checkAgeVerification;

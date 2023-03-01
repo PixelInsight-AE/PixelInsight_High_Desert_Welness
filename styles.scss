@@ -42,16 +42,52 @@ nav {
     opacity: 1;
   }
   .dropdown-menu {
-    background-color: $flower-medium;
-    border: solid 2px $terpine-dark;
+
+    width: 200px;
+    position: relative;
+    text-align: center;
+    background-color: $terpine-light;
+    border: solid 2px $flower-light;
     @include nice-box-shadow();
+    padding: 2rem;
+      a {
+        text-decoration: none;
+        color: $terpine-dark;
+        font-size: 1.25rem;
+        font-weight: 500;
+        &:hover {
+          color: $flower-light;
+        }
+      }
+      .i-tr {
+        @include dropDownNavBar();
+        top: 0;
+        right: 0;
+      }
+      .i-tl {
+        @include dropDownNavBar();
+        top: 0;
+        left: 0;
+      }
+      .i-br {
+        @include dropDownNavBar();
+        bottom: 0;
+        right: 0;
+      }
+      .i-bl {
+        @include dropDownNavBar();
+        bottom: 0;
+        left: 0;
+      }
   }
+
 }
 
 // Hero 
 #desert-background {
   background-image: url(assets/images/desertBackground.jpg);
   @include backgound-img();
+  background-color: rgba(255, 255, 255, 0.8);
   padding-top: 1rem;
 }
 
@@ -288,10 +324,35 @@ nav {
   #second-background {
     background-image: url(assets/images/weeeeeeeeeeed.png);
     @include backgound-img();
+    background-color: rgba(255, 255, 255, 0.9);
     box-shadow: $terpine-dark;
     padding-top: 2rem;
     height: 100%;
-    
+    #location-icon {
+      position: relative;
+      i {
+        position: absolute;   
+        right: 0;
+        top: .5;
+      }
+    }
+    #location {
+      color: $blue-2;
+      text-align: right;
+      p {
+        font-size: 1rem;
+        color: #0d0d0d;
+      }
+    }
+    #sustainable {
+      @include text-shadow();
+      color: $flower-medium;
+      text-align: left;
+      p {
+        font-size: 1rem;
+        color: #0d0d0d;
+      }
+    }
     #medical {
       position: relative;
       i {
@@ -299,29 +360,22 @@ nav {
         bottom: 0.5;
         right: 0;
       }
-      .medical-text {
-        text-align: right;
-        font-size: 1rem;
-      }
     }
-    #location {
+    .medical-text {
+      color: $purple-7;
       text-align: right;
-      font-size: 1rem;
-      #location-icon {
-        position: relative;
-        i {
-          position: absolute;
-          
-          right: 0;
-          top: .5;
-        }
-      }
+       p {
+        font-size: 1rem;
+        color: #0d0d0d;
+       }
+    }
+    h3 {
+      font-weight: 700;
+      font-size: 2.5rem;
+      
     }
     
-    #sustainable {
-      text-align: left;
-      font-size: 1rem;
-    }
+    
     i {
       &.fa-leaf {
         color: $flower-medium;
@@ -435,6 +489,11 @@ footer {
         color: $terpine-light;  
       }
     }
+  }
+  li {
+    list-style: none;
+    color: $flower-light;
+    //margin-bottom: 10px;
   }
 }
 

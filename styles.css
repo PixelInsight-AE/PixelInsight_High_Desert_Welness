@@ -78,18 +78,59 @@ nav #logo-small.visible {
   opacity: 1;
 }
 nav .dropdown-menu {
-  background-color: #abbe4b;
-  border: solid 2px #a3583a;
+  width: 200px;
+  position: relative;
+  text-align: center;
+  background-color: #dea467;
+  border: solid 2px #d1df93;
   box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
+  padding: 2rem;
+}
+nav .dropdown-menu a {
+  text-decoration: none;
+  color: #a3583a;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+nav .dropdown-menu a:hover {
+  color: #d1df93;
+}
+nav .dropdown-menu .i-tr {
+  position: absolute;
+  color: #abbe4b;
+  -webkit-text-stroke: 1px #a3583a;
+  top: 0;
+  right: 0;
+}
+nav .dropdown-menu .i-tl {
+  position: absolute;
+  color: #abbe4b;
+  -webkit-text-stroke: 1px #a3583a;
+  top: 0;
+  left: 0;
+}
+nav .dropdown-menu .i-br {
+  position: absolute;
+  color: #abbe4b;
+  -webkit-text-stroke: 1px #a3583a;
+  bottom: 0;
+  right: 0;
+}
+nav .dropdown-menu .i-bl {
+  position: absolute;
+  color: #abbe4b;
+  -webkit-text-stroke: 1px #a3583a;
+  bottom: 0;
+  left: 0;
 }
 
 #desert-background {
   background-image: url(assets/images/desertBackground.jpg);
-  background-color: rgba(255, 255, 255, 0.8);
   background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-color: rgba(255, 255, 255, 0.8);
   padding-top: 1rem;
 }
 
@@ -333,14 +374,39 @@ nav .dropdown-menu {
 
 #second-background {
   background-image: url(assets/images/weeeeeeeeeeed.png);
-  background-color: rgba(255, 255, 255, 0.8);
   background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: #a3583a;
   padding-top: 2rem;
   height: 100%;
+}
+#second-background #location-icon {
+  position: relative;
+}
+#second-background #location-icon i {
+  position: absolute;
+  right: 0;
+  top: 0.5;
+}
+#second-background #location {
+  color: #1565C0;
+  text-align: right;
+}
+#second-background #location p {
+  font-size: 1rem;
+  color: #0d0d0d;
+}
+#second-background #sustainable {
+  text-shadow: 2px 2px 0 rgba(163, 88, 58, 0.2);
+  color: #abbe4b;
+  text-align: left;
+}
+#second-background #sustainable p {
+  font-size: 1rem;
+  color: #0d0d0d;
 }
 #second-background #medical {
   position: relative;
@@ -350,25 +416,17 @@ nav .dropdown-menu {
   bottom: 0.5;
   right: 0;
 }
-#second-background #medical .medical-text {
+#second-background .medical-text {
+  color: #BA68C8;
   text-align: right;
+}
+#second-background .medical-text p {
   font-size: 1rem;
+  color: #0d0d0d;
 }
-#second-background #location {
-  text-align: right;
-  font-size: 1rem;
-}
-#second-background #location #location-icon {
-  position: relative;
-}
-#second-background #location #location-icon i {
-  position: absolute;
-  right: 0;
-  top: 0.5;
-}
-#second-background #sustainable {
-  text-align: left;
-  font-size: 1rem;
+#second-background h3 {
+  font-weight: 700;
+  font-size: 2.5rem;
 }
 #second-background i.fa-leaf {
   color: #abbe4b;
@@ -479,4 +537,8 @@ footer .social-media i.fa-twitter {
   bottom: 0;
   right: 0;
   color: #dea467;
+}
+footer li {
+  list-style: none;
+  color: #d1df93;
 }/*# sourceMappingURL=styles.css.map */
