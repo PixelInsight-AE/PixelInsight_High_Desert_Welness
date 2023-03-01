@@ -25,19 +25,16 @@
 </head>
 <body>
   <!-- Header -->
-<header class="container-fluid d-none d-md-block">
-  <div class="d-flex flex-row justify-content-center">
-    <img id="logo" src="./assets/images/newlogo.png" alt="">
+<header>
+  <img src="./assets/images/newlogo.png" alt="">
   <h1>High Desert Wellness</h1>
-  
-  </div>
 </header> 
   
   <!-- Navbar -->
   <nav class="navbar sticky-top navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand d-flex d-md-none" href="#">
-        <img id="brand-img" class="img-fluid" src="./assets/images/newlogo.png" alt="">
+        <img id="brand-img" class="img-fluid" src="./assets/images/newlogo.png" alt="logo">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -45,7 +42,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav m-auto mb-2 mb-lg-0">
           <li>
-            <img id="logo-small" class="img-fluid nav-logo" src="./assets/images/inverted-logo.png" alt="">
+            <img id="logo-small" class="img-fluid nav-logo" src="./assets/images/inverted-logo.png" alt="logo">
           </li>
           <li class="navs-item">
             <a class="nav-link active" aria-current="page" href="#">Our Mission</a>
@@ -74,16 +71,12 @@
             <a class="nav-link" href="https://www.nmhealth.org/publication/view/form/135/" target="_blank" >Apply For Your Medical Card!</a>
           </li>
         </ul>
-        <!-- <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form> -->
       </div>
     </div>
   </nav>
   
-  <div id="desert-background" class="parralax">
-    <div id="hero-header" class="container-fluid text-center parralax-content" >
+  <div id="desert-background">
+    <div id="hero-header" class="container-fluid text-center" >
       <div class="row">
         <div class="col-12">
           <h2>"<span id="cultivating">Cultivating</span> a New Kind of <span id="heat">Heat</span> in <span id="new-mexico">New Mexico</span>."</h2>
@@ -91,7 +84,7 @@
       </div>
     </div>
   
-  <!-- Hero Section -->
+    <!-- Hero Section -->
     <div id="hero-section" class="container">
       <div class="row">
         <div class="col-xs-12 col-md-9 text-center p-0">
@@ -103,16 +96,15 @@
           <p>
             Our mission is to provide high-quality, safe and reliable cannabis products to our customers in a welcoming and inclusive environment. We aim to educate our community about the benefits of cannabis, and to promote responsible use and cultivation. We strive to uphold the highest standards of customer service, product selection, and knowledge to ensure an exceptional experience for everyone who walks through our doors. Our goal is to be a trusted and respected member of the cannabis industry in New Mexico and beyond.
           </p>
-          
-          <!-- <img class="img-fluid" src="assets/images/weedcookies.png" alt=""> -->
         </div>
       </div>
     </div>
+    
     <div class="container">
       <div class="row">
         <div class="col-12 sub-hero">
           <hr>
-          <h1>High Desert wellness</h1>
+          <h2>High Desert wellness</h2>
           <p>Welcome to High Desert Wellness, your premier cannabis dispensary serving the greater desert region! We pride ourselves on offering the finest quality cannabis products and accessories to our valued customers.
 
             Our extensive selection of strains includes everything from classic favorites to rare and exotic varieties. Whether you prefer indica, sativa, or hybrid strains, we have something to suit your needs. Our knowledgeable budtenders can help you choose the perfect strain for your desired effect and potency.
@@ -128,151 +120,89 @@
         </div>
       </div>
     </div>
+
     <h2 class="shop">Enter Shop!</h2>
-    
     <!-- Map and weekly deals -->
   </div>
+  <div id="carousel-background" class="container-fluid">
     <div id="carousels">
-    
-      <div class="carousels-inner">
-      <i class="fa-solid fa-chevron-left fa-10x  scroll-buttons btnPrevious"></i>
-
-
-
-      <!-- <div class="category">
-        <div class="category-img">
-          <img class="img-fluid" src="./assets/images/Bud-1.png" alt="">
-        </div>
-        <h3>Flower</h3>
-      </div>
-      <div id="category-2" class="category">
-        <div class="category-img">  
-          <img class="img-fluid" src="./assets/images/catagory images/gummies.png" alt="">
-        </div>
-        <h3>Edibles</h3>
-      </div>
-      <div id="category-3" class="category">
-        <div class="category-img">
-          <img class="img-fluid" src="./assets/images/catagory images/concentrateBrandUse.png" alt="">
-        </div>
-        <h3>Concentrates</h3>
-      </div>
-      <div id="category-4" class="category">
-        <div class="category-img">
-          <img class="img-fluid" src="./assets/images/catagory images/cart.png" alt="">
-        </div>
-        <h3>Cartridges</h3>
-      </div>
-      <div id="category-5" class="category">
-        <div class="category-img">  
-          <img class="img-fluid" src="./assets/images/catagory images/medicinal.png" alt="">
-        </div>
-        <h3>Topicals & Tinctures</h3>
-      </div>
-      <div id="category-6" class="category">
-        <div class="category-img">
-          <img class="img-fluid" src="./assets/images/catagory images/prerollpack.png" alt="">
-        </div>
-        <h3>Pre-Rolls</h3>
-      </div> -->
-
-
-      <div class="shop-container">
-        <div class="shop-card">
-          <div class="shop-img">
-            <img src="./assets/images/Bud-1.png" alt="" class="img-fluid">
+        <div class="carousels-inner">
+          <i class="fa-solid fa-chevron-left fa-10x  scroll-buttons btnPrevious"></i>
+          <div class="shop-container">
+            <div class="shop-card">
+              <div class="shop-img">
+                <img src="./assets/images/Bud-1.png" alt="" class="img-fluid">
+              </div>
+              <div>
+                <h3>Flowers</h3> 
+                <p>
+                  we have a wide variety of indica and sative blends, all are lab-tested and verified.<br> Browse our webshop to see the current stock!
+                </p>
+                <button class="btn btn-primary">Shop now</button>
+              </div>
+            </div>
           </div>
-          <div class="shop-text">
-            <h3>Flowers</h3> 
-            <p>
-              we have a wide variety of indica and sative blends, all are lab-tested and verified.<br> Browse our webshop to see the current stock!
-            </p>
-            <button class="btn btn-primary">Shop now</button>
-          </div>
-        </div>
+          <button id="example" class="btnNext"><i class="fa-solid fa-chevron-right fa-10x scroll-buttons"></i></button>
       </div>
-
-
-
-
-      <button id="example" class="btnNext"><i class="fa-solid fa-chevron-right fa-10x scroll-buttons"></i></button>
-      
-      
-      
     </div>
-  </div>
-  
-
-  
-  
-
-      <div class="col-12">
-        <div class="carousel">
-          <button class="btnPrevious carousel-btn previous-btn"><i class="fa-solid fa-chevron-left fa-7x "></i></button> 
-          <button class="btnNext carousel-btn next-btn"><i class="fa-solid fa-chevron-right fa-7x"></i></button> 
-          <ul>
-              <li class="carousel-pics">
-                <div id="category-1" class="category">
-                  <div class="category-img">
-                    <img class="img-fluid" src="./assets/images/Bud-1.png" alt="">
-                  </div>
-                  <h3>Flower</h3>
-                </div>
-              </li>
-              <li>
-                <div id="category-1" class="category">
-                  <div class="category-img">
-                    <img class="img-fluid" src="./assets/images/catagoryimages/gummies.png" alt="">
-                  </div>
-                  <h3>Edibles</h3>
-                </div>
-              </li>
-              <li>
-                <div id="category-1" class="category">
-                  <div class="category-img">
-                    <img class="img-fluid" src="./assets/images/catagoryimages/concentrateBrandUse.png" alt="">
-                  </div>
-                  <h3>Concentrates</h3> 
-                </div>
-              </li>
-              <li>
-                <div id="category-1" class="category">
-                  <div class="category-img">
-                    <img class="img-fluid" src="./assets/images/catagoryimages/medicinal.png" alt="">
-                  </div>
-                  <h3>Topicals & Tinctures</h3>
-                </div>
-              </li>
-              <li>
-                <div id="category-1" class="category">
-                  <div class="category-img">
-                    <img class="img-fluid" src="./assets/images/catagoryimages/cart.png" alt="">
-                  </div>
-                  <h3>Cartridges</h3>
-                </div>
-              </li>
-              <li>
-                <div id="category-1" class="category">
-                  <div class="category-img">
-                    <img class="img-fluid" src="./assets/images/catagoryimages/prerollpack.png" alt="">
-                  </div>
-                  <h3>Pre-Rolls</h3>
-                </div>
-              </li>
-              
-          </ul>
+    <div class="col-12">
+      <div class="carousel">
+        <button class="btnPrevious carousel-btn previous-btn"><i class="fa-solid fa-chevron-left fa-7x "></i></button> 
+        <button class="btnNext carousel-btn next-btn"><i class="fa-solid fa-chevron-right fa-7x"></i></button> 
+        <ul>
+          <li class="carousel-pics">
+            <div id="category-1" class="category">
+              <div class="category-img">
+                <img class="img-fluid" src="./assets/images/Bud-1.png" alt="">
+              </div>
+              <h3>Flower</h3>
+            </div>
+          </li>
+          <li>
+            <div id="category-1" class="category">
+              <div class="category-img">
+                <img class="img-fluid" src="./assets/images/catagoryimages/gummies.png" alt="">
+              </div>
+              <h3>Edibles</h3>
+            </div>
+          </li>
+          <li>
+            <div id="category-1" class="category">
+              <div class="category-img">
+                <img class="img-fluid" src="./assets/images/catagoryimages/concentrateBrandUse.png" alt="">
+              </div>
+              <h3>Concentrates</h3> 
+            </div>
+          </li>
+          <li>
+            <div id="category-1" class="category">
+              <div class="category-img">
+                <img class="img-fluid" src="./assets/images/catagoryimages/medicinal.png" alt="">
+              </div>
+              <h3>Topicals & Tinctures</h3>
+            </div>
+          </li>
+          <li>
+            <div id="category-1" class="category">
+              <div class="category-img">
+                <img class="img-fluid" src="./assets/images/catagoryimages/cart.png" alt="">
+              </div>
+              <h3>Cartridges</h3>
+            </div>
+          </li>
+          <li>
+            <div id="category-1" class="category">
+              <div class="category-img">
+                <img class="img-fluid" src="./assets/images/catagoryimages/prerollpack.png" alt="">
+              </div>
+              <h3>Pre-Rolls</h3>
+            </div>
+          </li>
+        </ul>
       </div>
-
     </div>
- 
+ </div>
 
-
-
-
-
-
-  
-  
   <!-- <div class="container"> -->
     
   <div id="second-background"> 
@@ -310,10 +240,9 @@
           <h3>Medically Certified</h3>
           <p>Learn about medical marijuana in New Mexico and get a medical marijuana card with the help of experienced healthcare providers registered with the New Mexico Department of Health. Visit any of our dispensaries to purchase various products including flower, edibles, and tinctures. We provide a safe and comfortable environment with knowledgeable staff available to answer your questions. Come visit us today to take control of your health and explore the benefits of medical cannabis.</p>
           
-        </div>
-            
-          <!-- </div>
-        </div> -->
+        </div>   
+        
+        
       </div>
     </div>
   </div>
@@ -376,9 +305,7 @@
                   </tbody>
                 </table>
             </div>
-            <!-- <p>Social Media</p>
-              <i class="fa-brands fa-instagram fa-6x"></i>
-              <i class="fa-brands fa-twitter fa-6x"></i> -->
+            
             </div>
           <div class="col-12 disclaimer">
             <p>Disclaimer:
@@ -389,7 +316,7 @@
         </footer>
 
 
-        <div class="shop-container">
+        <!-- <div class="shop-container">
           <div class="shop-card">
             <div class="shop-img">
               <img src="./assets/images/Bud-1.png" alt="" class="img-fluid">
@@ -402,7 +329,7 @@
               <button class="btn btn-primary">Shop now</button>
             </div>
           </div>
-        </div>
+        </div> -->
 
       
 
@@ -416,195 +343,18 @@
 
 
   </div>
-      <!-- website link for medical card applications
-        https://www.nmhealth.org/publication/view/form/135/ -->
+      
         
-        <!-- 
-          <div id="map" class="col-xs-12 col-7">
-            
-          </div>
-          
-        -->
         
         
 <script src="./main.js"></script>
 </body>
 </html>
-
+<!--<p>Social Media</p>
+    <i class="fa-brands fa-instagram fa-6x"></i>
+    <i class="fa-brands fa-twitter fa-6x"></i> -->
 <!--Font awesome-->
 
 <!--JQuery-->
 
-<!-- Flowers 
-  <div class="container">
-    <div class="row">
-      <h1>Flower</h1>
-            <div  class="col-xs-11">
-              <div id="flower">
-                <div class="cards-item">
-                  <h4>Amnesia Gold</h4>
-                  <img class="img-fluid" src="./assets/images/Bud-1.png" alt="">
-                  <p>Type: Sativa</p>
-                </div>
-                <div class="cards-item">
-                  <h4>Northern Lights</h4>
-            <img class="img-fluid" src="./assets/images/Bud-2.png" alt="">
-            <p>Type: Indica</p>
-          </div>
-          <div class="cards-item">
-            <h4>Marshmellow-OG</h4>
-            <img class="img-fluid" src="./assets/images/Bud-3.png" alt="">
-            <p>Type: Hybrid</p>
-          </div>
-          <div class="cards-item">
-            <h4>Golden Goat</h4>
-            <img class="img-fluid" src="./assets/images/Bud-4.png" alt="">
-            <p>Type: Hybrid</p>
-          </div>
-          <div class="cards-item">
-            <h4>OG Kush</h4>
-            <img class="img-fluid" src="./assets/images/Bud-5.png" alt="">
-            <p>Type: Hybrid</p>
-          </div>
-          <div class="cards-item">
-            <h4>Train-wreck</h4>
-            <img class="img-fluid" src="./assets/images/Bud-6.png" alt="">
-            <p>Type: Hybrid</p>
-          </div>
-          <div class="cards-item">
-            <h4>Pinapple-Express</h4>
-            <img class="img-fluid" src="./assets/images/Bud-7.png" alt="">
-            <p>Type: Hybrid</p>
-          </div>
-        </div>
-      </div>
-    </div>
 
-
-     Edibles 
-    
-    <div class="row">
-      <h1>Edibles</h1>
-      <div class="col-xs-11">
-        <div id="edibles">
-          <div class="cards-item">
-            <h4>THC Ultra High Spectum Gummies</h4>
-            <img class="img-fluid" src="https://leafly-public.imgix.net/products/photos/lwk6BaoAQ6eL8I1IfV5z_hhc---thc-gummy-bag.jpg?auto=compress,format&w=112&dpr=1" alt="">
-            <p>Gummies</p>
-            <p>ratings? </p>
-          </div>
-          <div class="cards-item">
-            <h4>50mg THC Maple Candies | 10 pack</h4>
-            <img class="img-fluid" src="https://leafly-public.imgix.net/products/photos/R1jwqT8KS4irSo5SA827_thc-maple-candies.png?auto=compress,format&w=112&dpr=1" alt="">
-            <p>Candy</p>
-          </div>
-          <div class="cards-item">
-            <h4>50mg THC Shot | Strawberry Lemonaid</h4>
-            <img class="img-fluid" src="https://leafly-public.imgix.net/products/photos/a0ituKWRCSROOCJszYuQ_50mg-thc-shot---strawberry-lemonade.JPG?auto=compress,format&w=112&dpr=1" alt="">
-            <p>Drink</p>
-          </div>
-          <div class="cards-item">
-            <h4>10mg Delta-9 THC Cookies | 5 count</h4>
-            <img class="img-fluid" src="https://leafly-public.imgix.net/products/photos/2nWL8zfSi6TLNMbS9Wk4_thc-cookies-.png?auto=compress,format&w=112&dpr=1" alt="">
-            <p>Candy</p>
-          </div>
-        </div>    
-    </div>
-    
-     Concentrates 
-    <div class="row">
-      <h1>Concentrates</h1>
-      <div class="col-xs-11">
-        <div id="concentrates">
-          <div class="cards-item">
-            <h4>High Potency CBD Oil</h4>
-            <img class="img-fluid" src="./assets/images/CBD-Oil.png" alt="">
-            <p></p>
-          </div>
-          <div class="cards-item">
-            <h4>10:1 RSO</h4>
-            <img class="img-fluid" src="./assets/images/CBD-Oil.png" alt="">
-            <p></p>
-          </div>
-          <div class="cards-item">
-            <h4>Chocolate Bites</h4>
-            <img class="img-fluid" src="https://picsum.photos/200/300" alt="">
-            <p></p>
-          </div>
-          <div class="cards-item">
-            <h4>Chocolate Bites</h4>
-            <img class="img-fluid" src="https://picsum.photos/200/300" alt="">
-            <p></p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    Cartridges 
-    <div class="row">
-      <h1>Cartridges</h1>
-      <div class="col-xs-11">
-        <div id="cartridges">
-          <div class="cards-item">
-            <h4>Chocolate Bites</h4>
-            <img class="img-fluid" src="https://picsum.photos/200/300" alt="">
-            <p></p>
-          </div>
-          <div class="cards-item">
-            <h4>Chocolate Bites</h4>
-            <img class="img-fluid" src="https://picsum.photos/200/300" alt="">
-            <p></p>
-          </div>
-          <div class="cards-item">
-            <h4>Chocolate Bites</h4>
-            <img class="img-fluid" src="https://picsum.photos/200/300" alt="">
-            <p></p>
-          </div>
-          <div class="cards-item">
-            <h4>Chocolate Bites</h4>
-            <img class="img-fluid" src="https://picsum.photos/200/300" alt="">
-            <p></p>
-          </div>
-          <div class="cards-item">
-            <h4>Chocolate Bites</h4>
-            <img class="img-fluid" src="https://picsum.photos/200/300" alt="">
-            <p></p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-     Pre-Rolls 
-    <div class="row">
-      <h1>Pre-Rolls</h1>
-      <div class="col-xs-11">
-        <div id="pre-rolls">
-          <div class="cards-item">
-            <h4>Chocolate Bites</h4>
-            <img class="img-fluid" src="https://picsum.photos/200/300" alt="">
-            <p></p>
-          </div>
-          <div class="cards-item">
-            <h4>Chocolate Bites</h4>
-            <img class="img-fluid" src="https://picsum.photos/200/300" alt="">
-            <p></p>
-          </div>
-          <div class="cards-item">
-            <h4>Chocolate Bites</h4>
-            <img class="img-fluid" src="https://picsum.photos/200/300" alt="">
-            <p></p>
-          </div>
-          <div class="cards-item">
-            <h4>Chocolate Bites</h4>
-            <img class="img-fluid" src="https://picsum.photos/200/300" alt="">
-            <p></p>
-          </div>
-          <div class="cards-item">
-            <h4>Chocolate Bites</h4>
-            <img class="img-fluid" src="https://picsum.photos/200/300" alt="">
-            <p></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->

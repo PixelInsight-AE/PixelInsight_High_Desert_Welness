@@ -98,7 +98,9 @@ $(function(){
   $('.category').hover(function() {
     console.log("hovered");
     clearInterval(intervalId);
+  
   });
+
   $('.btnPrevious').click(function(){
     clearInterval(intervalId); // Clear the interval
     intervalId = setInterval(function() {

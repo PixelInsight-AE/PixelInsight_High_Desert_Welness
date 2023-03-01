@@ -5,6 +5,9 @@
 
 * ! We should each have our own branch per section before we actually build anything.
 */
+* {
+  font-family: highDesert;
+}
 
 @import "styles/_variables";
 @import "./styles/_styleguide";
@@ -16,524 +19,353 @@
 @import "./styles/breakpoints/styles-xl";
 @import "./styles/breakpoints/styles-xxl";
 
-@mixin text-shadow {
-  text-shadow: 2px 2px 0 rgba(163, 88, 58, 0.2);
-}
-
-@mixin nice-box-shadow {
-  box-shadow: 
-  0 16px 32px rgba(163, 88, 58, 0.2);
-}
-
-@mixin  header-background {
-  background-image: url(assets/images/weedDewDrop.png);
-  background-color: rgba(255, 255, 255, 0.8);
-  background-blend-mode: overlay;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 
-@keyframes shake {
-  0% { transform: translateX(0); }
-  10%, 30%, 50%, 70%, 90% { transform: translateX(-1px); }
-  20%, 40%, 60%, 80% { transform: translateX(1px); }
-  100% { transform: translateX(0); }
-}
 
 
+
+
+/* main styles */
+// header
 header {
-  color: $flower-dark;    
+  @include flex-row();    
   @include text-shadow();
   @include header-background();
-      header img { 
-        border: 2px solid $terpine-dark;
-        color: $terpine-dark;
-        width: 50px;
-        height: 50px
-      }  
-      h1 {
-        margin-top: 3rem;
-        font-size: 3rem;
-        font-weight: 600;
-        font-family: HighDesert;
-        margin-bottom: 1rem;
-      }
-      #logo {
-        margin-bottom: 1rem;
-        width: 125px;
-        height: 130px;
-      }
-          
-          
+  img { 
+    margin-bottom: 1rem;
+    width:  125px;
+    height: 130px;
+    }      
+  h1 {
+    @include big-heading();
+    margin-bottom: 1rem;
+  }
 }
 
-
+// navbar
 nav {
   background-color: $flower-medium; 
   @include nice-box-shadow();
-  nav img {
-    width: 30px;
-    height: 30px;
-    //padding-right: px;
-  }
   #logo-small {
+    width: 35px;
+    height: 35px;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
   }
-  
   #logo-small.visible {
     opacity: 1;
   }
-  
-  
-}
-.dropdown-menu {
-  background-color: $flower-medium;
-  border: solid 2px $terpine-dark;
-  @include nice-box-shadow();
-  a {
-    color: $terpine-dark;
-    font-weight: 600;
-    font-size: 1.5rem;
-    font-family: highDesert;
-  }
-  a:hover {
-    color: $terpine-light;
+  .dropdown-menu {
+    background-color: $flower-medium;
+    border: solid 2px $terpine-dark;
+    @include nice-box-shadow();
   }
 }
+
+
+
+// Hero 
 #desert-background {
   background-image: url(assets/images/desertBackground.jpg);
-  background-color: rgba(255, 255, 255, 0.8);
-  background-blend-mode: overlay;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  @include backgound-img();
   padding-top: 1rem;
 }
 
-#second-background {
-  background-image: url(assets/images/weeeeeeeeeeed.png);
-  background-color: rgba(255, 255, 255, 0.8);
-  background-blend-mode: overlay;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
-  padding-top: 2rem;
-  height: 100%;
+#hero-header {
+  font-weight: 500;
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  #cultivating {
+    color: $flower-dark;
+  }
+  #heat {
+    display: inline-block;
+    background: linear-gradient(to top, #ff4500, #ff8c00, #ffd700, #ffff00);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 0.5px $terpine-dark;
+    &:hover {  
+      animation: shake 2s;
+      animation-iteration-count: infinite;
+    }
+  }
+  #new-mexico {
+    color: $flower-medium;
+    -webkit-text-stroke: 0.25px $terpine-dark;
+  }
 }
 
-// hero-header
-#hero-header {
-  
-    
-      font-weight: 500;
-      font-size: 2rem;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      font-family: highDesert;
-    
-          #cultivating {
-            color: $flower-dark;
-          }
-    
-          #heat {
-            display: inline-block;
-            background: linear-gradient(to top, #ff4500, #ff8c00, #ffd700, #ffff00);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            -webkit-text-stroke: 0.5px $terpine-dark;
-              &:hover {
-                
-                animation: shake 2s;
-                animation-iteration-count: infinite;
-              }
-          }
-          
-          #new-mexico {
-            color: $flower-medium;
-            -webkit-text-stroke: 0.25px $terpine-dark;
-          }
-    
-}
-    
 #hero-section {
 margin-bottom: 2rem;
-    #hero-img {
-      margin: 0;
-      border: solid 4px $terpine-light;
-      border-right: none;
-      @include nice-box-shadow();
-      
-      border-radius: 30px 0 0 30px;
-    }
-    #mission-statement {
-      background-color: $flower-medium;
-      border: solid 4px $terpine-light;
-      border-left: none;
-      @include nice-box-shadow();
-      margin: 0;
-      font-family: highDesert;
-      
-      border-radius: 0 30px 30px 0;
-          // hr {
-          //   border: solid 3px $terpine-dark;
-          // }
-          h3 {
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-            font-size: 2rem;
-            
-            text-align: center;
-            
-            
-          }
-          img {
-            border: solid 2px $purple-4;
-            @include nice-box-shadow();
-            
-            border-radius: 30px;
-          }
-          i {
-            color: $terpine-dark;
-            -webkit-text-stroke: 1px $flower-light;
-          }
-    }
-}
-    
-  
-.sub-hero {
-  
-  font-family: highDesert;
-  text-align: center;
-      h1 {
-        font-size: 3rem;
-        font-weight: 600;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        color: $flower-dark;
-      }
-}
-    
-.table-container {
-  display: flex;
-  flex-direction: column;
-  
-}
-    
-    
-    
-i {
-  &.fa-leaf {
-    color: $flower-medium;
-  }
-  &.fa-notes-medical {
-    color: $purple-7;
-  }
-  &.fa-earth-europe {
-    color: $blue-2;
-  }
-}
-
-.nav-logo {
-  width: 35px;
-  height: 40px;
-}
-
-.social-media {
-  position: relative; 
-  height: 200px; 
-  i {
-    position: absolute;
-    &.fa-instagram {
-      top: 5; 
-      left: 0;
-      color: $terpine-light; 
-    }
-    &.fa-twitter {
-      bottom: 0;
-      right: 0;
-      color: $terpine-light; 
-      
-    }
-  }
-}
-#location-icon {
-  position: relative;
-  i {
-    position: absolute;
-    
-    right: 0;
-    top: .5;
-  }
-}
-#hours-operation {
-  //border: solid 2px $purple-4;
-  padding-left: 1rem;
-  //background-color: $flower-medium;
-  width: auto;
-  height: auto;
-  //@include shadow-1;
-  font-size: 1.5rem;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  color: $flower-light;
-  
-  caption {
-    color: $flower-light;
-  }
-  i {
-    color: $terpine-dark;
-    -webkit-text-stroke: 1px $flower-light;
-  }
-}
-
-// .disclaimer {
-//   margin-top: 0;
-// }
-.card-item {
-  flex: 0 0 250px;
-  border: solid 3px $green-1;
-  background-color: $flower-medium;
-
-  @include shadow-1;
-  border-radius: 10px 0 10px 0;
-  margin: $margin-small;
-}
-
-#flower, #edibles, #concentrates, #cartridges, #pre-rolls, #catagory {
-  display: flex;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-#map {
-  border-right: solid 2px gray;
-}
-
-
-#green-bar {
-  background-color: $flower-medium;
-}
-
-
-
-
-//Carousel
-// .carousel-container {
-//   display: flex;
-//   overflow: hidden;
-//   width: 100%;
-// }
-
-// .carousel-item {
-//   flex: 0 0 calc(100% / 3);
-//   transition: transform 0.5s ease;
-// }
-
-// .item-1 {
-//   transform: translateX(0);
-// }
-
-// .item-2 {
-//   transform: translateX(calc(100% / 3));
-// }
-
-// .item-3 {
-//   transform: translateX(calc(2 * 100% / 3));
-// }
-
-// .item-4 {
-//   transform: translateX(100%);
-// }
-
-// .item-5 {
-//   transform: translateX(100%);
-// }
-.carousel-btn {
-  position: absolute;
-}
-.previous-btn:hover{
-  opacity: 1;
-}
-.next-btn:hover{
-  opacity: 1;
-}
-.previous-btn {
-  left: 0;
-  margin-top: 140px;
-  background-color: rgba($color: $flower-medium, $alpha: 0.0);
-  z-index: 2;
-  border: none;
-  color: $purple-4;
-  opacity: 0.5;
-}
-.next-btn {
-  right: 0;
-  z-index: 2;
-  margin-top: 140px;
-  background-color: rgba($color: $flower-medium, $alpha: 0.0);
-  border: none;
-  color: $purple-4;
-  opacity: 0.5;
-  
-}
-
-.carousel{
-  background-color: $flower-medium;
-  //padding-top: 20px;
-  width: 100%;
-  overflow: hidden;
-  height: 450px;
-  position: relative;
-  
-}.carousel ul{
-  position: relative;
-  list-style: none;
-  list-style-type: none;
-  //margin: 2rem;
-  height: 250px;
-  padding: 1rem;
-}.carousel ul li{
-  position: absolute;
-  height: 250px;
-  width: 250px;
-  //float: left;
-  margin: 1rem;
-  //background-image: url(assets/images/Bud-1.png);
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  padding-top: 25px;
-}
-
-
-
-#carousels {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  //background-image: url('./assets/images/weedDewDrop.png');
-  //background-size: cover;
-  background-color: $flower-medium;
-  width: 100%;
-  height: 400px;
-  //padding-bottom: 1rem; 
-  h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    //padding-top: 2rem;
-    //margin-top: 2rem;
-    //margin-bottom: 2rem;
-    color: $purple-2;
-  }
-}
-.carousels-inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%; 
-  //overflow-x: scroll;
-  overflow-y: hidden;
-}
-.category {
-  
-  flex-direction: column;
-  justify-content: space-between;
-  width: 275px;
-  height: 275px;
-  padding: 1rem;
-  margin: 1rem 1rem rem 1rem;
-  border: solid 4px $purple-4;
-  border-radius: 50%;
-  @include nice-box-shadow();
-  background-color: #f3f3f3;
-  text-align: center;
-  transition: all ease-in-out 0.5s;
-  filter: blur(1px);
-  h3 {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    font-family: highDesert;
-    color: $purple-2;
-    font-weight: 400;
-    border: 1px solid rgba($color: $purple-2, $alpha: 1.0);
-    border-radius: 10px;
+  #hero-img {
+    border: solid 4px $terpine-light;
+    border-right: none;
+    border-radius: 30px 0 0 30px;
     @include nice-box-shadow();
-    background-color: $terpine-light; 
   }
-  &:hover {
-    //background-color: orange;
-    border: solid 4px $purple-4;
+  #mission-statement {
+    background-color: $flower-medium;
+    border: solid 4px $terpine-light;
+    border-left: none;
+    border-radius: 0 30px 30px 0;
+    text-align: center;
     @include nice-box-shadow();
-    transform: scale(1.115);
-    filter: blur(0px);
     h3 {
-      background-color: $terpine-light; 
-      color: $purple-2;
-      border: 1px solid rgba($color: $purple-2, $alpha: 1.0);
-      border-radius: 10px;
-      @include nice-box-shadow();
+      margin: 2rem;
+      font-size: 2rem;
+    }
+    i {
+      color: $terpine-dark;
+      -webkit-text-stroke: 1px $flower-light;
     }
   }
 }
 
-#medical {
-  position: relative;
-  i {
-    position: absolute;
-    bottom: 0.5;
-    right: 0;
+// Sub-Hero
+.sub-hero {  
+  text-align: center;
+  h2 {
+    color: $flower-dark;
+    margin: 2rem;
+    @include big-heading();
   }
-}
-.medical-text {
-  text-align: right;
-  font-family: highDesert;
-  font-size: 1rem;
-}
-
-#location {
-  text-align: right;
-  font-family: highDesert;
-  font-size: 1rem;
-}
-
-#sustainable {
-  text-align: left;
-  font-family: highDesert;
-  font-size: 1rem;
-}
-
-#example {
-  background-color: $flower-medium;
-  border: none;
-}
-
-.category-img {
-  height: 230px;
-  width: 230px;
 }
 
 .shop {
-  margin: 0;
+  margin: 0px; // whitespace!!!!!!!!
   padding: 3rem;
   text-align: center;
-  font-size: 2rem;
-  font-family: highDesert;
+  font-size: 3rem;
   font-weight: 600;
   color : $terpine-dark;
 }
+ 
+// Carousel start
+#carousel-background {
+  padding: 0;
+  background-image: url();
+  @include backgound-img();
+  
+    .shop-container {
+      background-color: $flower-medium;
+      @include flex-row();
+      .shop-card {
+        @include flex-row();
+        width: 600px;
+        height: 300px;
+        margin: 2rem; 
+        border: solid 4px $purple-4;
+        border-radius: 5%;
+        background-color: #f3f3f3;
+        text-align: center;
+        transition: all ease-in-out 0.5s;
+        h3 {
+          margin: 2rem;
+          color: $purple-2;
+          font-weight: 400;
+          border: 1px solid rgba($color: $purple-2, $alpha: 1.0);
+          border-radius: 10px;
+          background-color: $terpine-light; 
+          @include nice-box-shadow();
+        }
+        &:hover {
+          border: solid 4px $purple-4;
+          transform: scale(1.115);
+          @include nice-box-shadow();
+        }
+        .shop-img {
+          height: 250px;
+          width: 250px;
+        }
+      }
+    }
 
-.scroll-buttons {
-  height: 150px;
+
+
+    .carousel-btn {
+      position: absolute;
+    }
+    .previous-btn:hover{
+      opacity: 1;
+    }
+    .next-btn:hover{
+      opacity: 1;
+    }
+
+    .previous-btn {
+      left: 0;
+      @include nav-buttons();
+    }
+    .next-btn {
+      right: 0;
+      @include nav-buttons();
+    }
+
+    .carousel{
+      background-color: $flower-medium;
+      width: 100%;
+      overflow: hidden;
+      height: 450px;
+      position: relative;
+      
+    }.carousel ul{
+      position: relative;
+      list-style: none;
+      list-style-type: none;
+      height: 250px;
+      padding: 1rem;
+    }.carousel ul li{
+      position: absolute;
+      height: 250px;
+      width: 250px;
+      margin: 1rem;
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      padding-top: 25px;
+    }
+
+    #carousels {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: $flower-medium;
+      width: 100%;
+      height: 400px;
+      
+      h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: $purple-2;
+      }
+    }
+    .carousels-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%; 
+      overflow-y: hidden;
+    }
+    .category {
+      
+      flex-direction: column;
+      justify-content: space-between;
+      width: 275px;
+      height: 275px;
+      padding: 1rem;
+      margin: 1rem 1rem rem 1rem;
+      border: solid 4px $purple-4;
+      border-radius: 50%;
+      @include nice-box-shadow();
+      background-color: #f3f3f3;
+      text-align: center;
+      transition: all ease-in-out 0.5s;
+      filter: blur(1px);
+      h3 {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+        color: $purple-2;
+        font-weight: 400;
+        border: 1px solid rgba($color: $purple-2, $alpha: 1.0);
+        border-radius: 10px;
+        @include nice-box-shadow();
+        background-color: $terpine-light; 
+      }
+      &:hover {
+        border: solid 4px $purple-4;
+        @include nice-box-shadow();
+        transform: scale(1.115);
+        filter: blur(0px);
+        h3 {
+          background-color: $terpine-light; 
+          color: $purple-2;
+          border: 1px solid rgba($color: $purple-2, $alpha: 1.0);
+          border-radius: 10px;
+          @include nice-box-shadow();
+        }
+      }
+    }
+
+
+    #example {
+      background-color: $flower-medium;
+      border: none;
+    }
+
+    .category-img {
+      height: 230px;
+      width: 230px;
+    }
+
+
+
+    .scroll-buttons {
+      height: 150px;
+    }
 
 }
 
-#footer-background {
+// carousel end
 
+#second-background {
+  background-image: url(assets/images/weeeeeeeeeeed.png);
+  @include backgound-img();
+  padding-top: 2rem;
+  height: 100%;
+    #medical {
+      position: relative;
+      i {
+        position: absolute;
+        bottom: 0.5;
+        right: 0;
+      }
+      .medical-text {
+        text-align: right;
+    
+        font-size: 1rem;
+      }
+    }
+    
+    #location {
+      text-align: right;
+  
+      font-size: 1rem;
+      #location-icon {
+        position: relative;
+        i {
+          position: absolute;
+          
+          right: 0;
+          top: .5;
+        }
+      }
+    }
+    
+    #sustainable {
+      text-align: left;
+  
+      font-size: 1rem;
+    }
+    
+    i {
+      &.fa-leaf {
+        color: $flower-medium;
+      }
+      &.fa-notes-medical {
+        color: $purple-7;
+      }
+      &.fa-earth-europe {
+        color: $blue-2;
+      }
+    }
+}
+
+#footer-background {
   background-image: url(assets/images/weedDewDrop.png);
   background-color: rgba(#0d0d0d, 0.7);
   background-blend-mode: overlay;
@@ -543,14 +375,10 @@ i {
 }
 
 footer {
-  
-  //background-color: $gray-2;
   padding: 1rem;
   margin-top: 0;
   border-top: solid 4px $terpine-light;  
-  //border-bottom: solid 4px $terpine-light;
   @include nice-box-shadow();
-  font-family: highDesert;
   font-size: 1.5rem;
   text-align: center;
   color: $green-4;
@@ -566,6 +394,10 @@ footer {
     color: $flower-medium;
     font-weight: 600;
     margin-bottom: 20px;
+  }
+  .table-container {
+    display: flex;
+    flex-direction: column;
   }
 
   .form-group {
@@ -600,93 +432,51 @@ footer {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-
     &:hover {
       background-color: #0069d9;
     }
   }
-}
-
-
-.shop-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  //@include nice-box-shadow();
-  
-  //
-
-  //$flower-medium rgba
-  
-
-  background-color: $flower-medium;
-    .shop-card {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      width: 600px;
-      height: 300px;
-      margin: 1rem;
-      padding: 1rem;
-      border: solid 4px $purple-4;
-      border-radius: 5%;
-      //@include nice-box-shadow();
-      background-color: #f3f3f3;
-      text-align: center;
-      transition: all ease-in-out 0.5s;
-      //filter: blur(5px);
-      h3 {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        font-family: highDesert;
-        color: $purple-2;
-        font-weight: 400;
-        border: 1px solid rgba($color: $purple-2, $alpha: 1.0);
-        border-radius: 10px;
-        @include nice-box-shadow();
-        background-color: $terpine-light; 
-      }
-      &:hover {
-        //background-color: orange;
-        border: solid 4px $purple-4;
-        @include nice-box-shadow();
-        transform: scale(1.115);
-        h3 {
-          background-color: $terpine-light; 
-          color: $purple-2;
-          border: 1px solid rgba($color: $purple-2, $alpha: 1.0);
-          border-radius: 10px;
-          @include nice-box-shadow();
-        }
-      }
-      .shop-img {
-        
-        height: 250px;
-        width: 250px;
-      }
-    }
-    
-  }
-
-
-
-
-@media screen and (max-width: 480px) {
-  #brand-img {
-    border: 1px solid $terpine-light;
+  #hours-operation {
+    padding-left: 1rem;
+    width: auto;
+    height: auto;
+    font-size: 1.5rem;
     border-radius: 10px;
-    width: 40px;
-    height: 45px;
-  }
-
-  nav {
-    background-color: $terpine-dark;
-    .navbar-toggler {
-      background-color: $flower-light;
+    margin-bottom: 20px;
+    color: $flower-light;
+    
+    caption {
+      color: $flower-light;
+    }
+    i {
+      color: $terpine-dark;
+      -webkit-text-stroke: 1px $flower-light;
     }
   }
-  
+  .social-media {
+    position: relative; 
+    height: 200px; 
+    i {
+      position: absolute;
+      &.fa-instagram {
+        top: 5; 
+        left: 0;
+        color: $terpine-light; 
+      }
+      &.fa-twitter {
+        bottom: 0;
+        right: 0;
+        color: $terpine-light; 
+        
+      }
+    }
+  }
 }
+
+
+
+
+
+
+
 

@@ -134,3 +134,60 @@ $red-10: #FFEBEE;
 
 
 $pink-1: pink;
+
+/* Mixins */
+@mixin text-shadow {
+  text-shadow: 2px 2px 0 rgba(163, 88, 58, 0.2);
+}
+
+@mixin nice-box-shadow {
+  box-shadow: 
+  0 16px 32px rgba(163, 88, 58, 0.2);
+}
+
+@mixin  header-background {
+  background-image: url(assets/images/weedDewDrop.png);
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin backgound-img {
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin big-heading {
+  color: $flower-dark;
+  margin-top: 3rem;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+@mixin nav-buttons {
+  margin-top: 140px;
+  background-color: rgba($color: $flower-medium, $alpha: 0.0);
+  z-index: 2;
+  border: none;
+  color: $purple-4;
+  opacity: 0.5;
+}
+
+/* Keyframes */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-1px); }
+  20%, 40%, 60%, 80% { transform: translateX(1px); }
+  100% { transform: translateX(0); }
+}

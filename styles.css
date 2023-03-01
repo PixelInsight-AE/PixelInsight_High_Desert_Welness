@@ -5,6 +5,10 @@
 
 * ! We should each have our own branch per section before we actually build anything.
 */
+* {
+  font-family: highDesert;
+}
+
 /**
  * TODO : Font sizing for all bootstrap breakpoints.
  * TODO : Color pallette mixins, same for shadows, & hovers.
@@ -25,6 +29,8 @@
 /* Forms */
 /* Shadows */
 /* pulled a list of popular colors for dispensaries for reference */
+/* Mixins */
+/* Keyframes */
 @keyframes shake {
   0% {
     transform: translateX(0);
@@ -39,8 +45,12 @@
     transform: translateX(0);
   }
 }
+/* main styles */
 header {
-  color: #677e34;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   text-shadow: 2px 2px 0 rgba(163, 88, 58, 0.2);
   background-image: url(assets/images/weedDewDrop.png);
   background-color: rgba(255, 255, 255, 0.8);
@@ -48,54 +58,36 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
 }
-header header img {
-  border: 2px solid #a3583a;
-  color: #a3583a;
-  width: 50px;
-  height: 50px;
-}
-header h1 {
-  margin-top: 3rem;
-  font-size: 3rem;
-  font-weight: 600;
-  font-family: HighDesert;
-  margin-bottom: 1rem;
-}
-header #logo {
+header img {
   margin-bottom: 1rem;
   width: 125px;
   height: 130px;
+}
+header h1 {
+  color: #677e34;
+  margin-top: 3rem;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 nav {
   background-color: #abbe4b;
   box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
 }
-nav nav img {
-  width: 30px;
-  height: 30px;
-}
 nav #logo-small {
+  width: 35px;
+  height: 35px;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
 nav #logo-small.visible {
   opacity: 1;
 }
-
-.dropdown-menu {
+nav .dropdown-menu {
   background-color: #abbe4b;
   border: solid 2px #a3583a;
   box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
-}
-.dropdown-menu a {
-  color: #a3583a;
-  font-weight: 600;
-  font-size: 1.5rem;
-  font-family: highDesert;
-}
-.dropdown-menu a:hover {
-  color: #dea467;
 }
 
 #desert-background {
@@ -108,23 +100,11 @@ nav #logo-small.visible {
   padding-top: 1rem;
 }
 
-#second-background {
-  background-image: url(assets/images/weeeeeeeeeeed.png);
-  background-color: rgba(255, 255, 255, 0.8);
-  background-blend-mode: overlay;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
-  padding-top: 2rem;
-  height: 100%;
-}
-
 #hero-header {
   font-weight: 500;
   font-size: 2rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  font-family: highDesert;
 }
 #hero-header #cultivating {
   color: #677e34;
@@ -132,9 +112,9 @@ nav #logo-small.visible {
 #hero-header #heat {
   display: inline-block;
   background: linear-gradient(to top, #ff4500, #ff8c00, #ffd700, #ffff00);
-  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  -webkit-background-clip: text;
   -webkit-text-stroke: 0.5px #a3583a;
 }
 #hero-header #heat:hover {
@@ -150,31 +130,22 @@ nav #logo-small.visible {
   margin-bottom: 2rem;
 }
 #hero-section #hero-img {
-  margin: 0;
   border: solid 4px #dea467;
   border-right: none;
-  box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
   border-radius: 30px 0 0 30px;
+  box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
 }
 #hero-section #mission-statement {
   background-color: #abbe4b;
   border: solid 4px #dea467;
   border-left: none;
-  box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
-  margin: 0;
-  font-family: highDesert;
   border-radius: 0 30px 30px 0;
+  text-align: center;
+  box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
 }
 #hero-section #mission-statement h3 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem;
   font-size: 2rem;
-  text-align: center;
-}
-#hero-section #mission-statement img {
-  border: solid 2px #8E24AA;
-  box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
-  border-radius: 30px;
 }
 #hero-section #mission-statement i {
   color: #a3583a;
@@ -182,117 +153,84 @@ nav #logo-small.visible {
 }
 
 .sub-hero {
-  font-family: highDesert;
   text-align: center;
 }
-.sub-hero h1 {
+.sub-hero h2 {
+  color: #677e34;
+  margin: 2rem;
+  color: #677e34;
+  margin-top: 3rem;
   font-size: 3rem;
   font-weight: 600;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  color: #677e34;
 }
 
-.table-container {
-  display: flex;
-  flex-direction: column;
-}
-
-i.fa-leaf {
-  color: #abbe4b;
-}
-i.fa-notes-medical {
-  color: #BA68C8;
-}
-i.fa-earth-europe {
-  color: #1565C0;
-}
-
-.nav-logo {
-  width: 35px;
-  height: 40px;
-}
-
-.social-media {
-  position: relative;
-  height: 200px;
-}
-.social-media i {
-  position: absolute;
-}
-.social-media i.fa-instagram {
-  top: 5;
-  left: 0;
-  color: #dea467;
-}
-.social-media i.fa-twitter {
-  bottom: 0;
-  right: 0;
-  color: #dea467;
-}
-
-#location-icon {
-  position: relative;
-}
-#location-icon i {
-  position: absolute;
-  right: 0;
-  top: 0.5;
-}
-
-#hours-operation {
-  padding-left: 1rem;
-  width: auto;
-  height: auto;
-  font-size: 1.5rem;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  color: #d1df93;
-}
-#hours-operation caption {
-  color: #d1df93;
-}
-#hours-operation i {
+.shop {
+  margin: 0px;
+  padding: 3rem;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
   color: #a3583a;
-  -webkit-text-stroke: 1px #d1df93;
 }
 
-.card-item {
-  flex: 0 0 250px;
-  border: solid 3px #1B5E20;
+#carousel-background {
+  padding: 0;
+  background-image: url();
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#carousel-background .shop-container {
   background-color: #abbe4b;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  border-radius: 10px 0 10px 0;
-  margin: 0.625rem;
-}
-
-#flower, #edibles, #concentrates, #cartridges, #pre-rolls, #catagory {
   display: flex;
-  overflow-x: auto;
-  white-space: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
-
-#map {
-  border-right: solid 2px gray;
+#carousel-background .shop-container .shop-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 300px;
+  margin: 2rem;
+  border: solid 4px #8E24AA;
+  border-radius: 5%;
+  background-color: #f3f3f3;
+  text-align: center;
+  transition: all ease-in-out 0.5s;
 }
-
-#green-bar {
-  background-color: #abbe4b;
+#carousel-background .shop-container .shop-card h3 {
+  margin: 2rem;
+  color: #6A1B9A;
+  font-weight: 400;
+  border: 1px solid #6a1b9a;
+  border-radius: 10px;
+  background-color: #dea467;
+  box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
 }
-
-.carousel-btn {
+#carousel-background .shop-container .shop-card:hover {
+  border: solid 4px #8E24AA;
+  transform: scale(1.115);
+  box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
+}
+#carousel-background .shop-container .shop-card .shop-img {
+  height: 250px;
+  width: 250px;
+}
+#carousel-background .carousel-btn {
   position: absolute;
 }
-
-.previous-btn:hover {
+#carousel-background .previous-btn:hover {
   opacity: 1;
 }
-
-.next-btn:hover {
+#carousel-background .next-btn:hover {
   opacity: 1;
 }
-
-.previous-btn {
+#carousel-background .previous-btn {
   left: 0;
   margin-top: 140px;
   background-color: rgba(171, 190, 75, 0);
@@ -301,34 +239,30 @@ i.fa-earth-europe {
   color: #8E24AA;
   opacity: 0.5;
 }
-
-.next-btn {
+#carousel-background .next-btn {
   right: 0;
-  z-index: 2;
   margin-top: 140px;
   background-color: rgba(171, 190, 75, 0);
+  z-index: 2;
   border: none;
   color: #8E24AA;
   opacity: 0.5;
 }
-
-.carousel {
+#carousel-background .carousel {
   background-color: #abbe4b;
   width: 100%;
   overflow: hidden;
   height: 450px;
   position: relative;
 }
-
-.carousel ul {
+#carousel-background .carousel ul {
   position: relative;
   list-style: none;
   list-style-type: none;
   height: 250px;
   padding: 1rem;
 }
-
-.carousel ul li {
+#carousel-background .carousel ul li {
   position: absolute;
   height: 250px;
   width: 250px;
@@ -338,8 +272,7 @@ i.fa-earth-europe {
   text-align: center;
   padding-top: 25px;
 }
-
-#carousels {
+#carousel-background #carousels {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -348,13 +281,12 @@ i.fa-earth-europe {
   width: 100%;
   height: 400px;
 }
-#carousels h2 {
+#carousel-background #carousels h2 {
   font-size: 2rem;
   font-weight: 600;
   color: #6A1B9A;
 }
-
-.carousels-inner {
+#carousel-background .carousels-inner {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -362,8 +294,7 @@ i.fa-earth-europe {
   height: 100%;
   overflow-y: hidden;
 }
-
-.category {
+#carousel-background .category {
   flex-direction: column;
   justify-content: space-between;
   width: 275px;
@@ -378,10 +309,9 @@ i.fa-earth-europe {
   transition: all ease-in-out 0.5s;
   filter: blur(1px);
 }
-.category h3 {
+#carousel-background .category h3 {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  font-family: highDesert;
   color: #6A1B9A;
   font-weight: 400;
   border: 1px solid #6a1b9a;
@@ -389,69 +319,77 @@ i.fa-earth-europe {
   box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
   background-color: #dea467;
 }
-.category:hover {
+#carousel-background .category:hover {
   border: solid 4px #8E24AA;
   box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
   transform: scale(1.115);
   filter: blur(0px);
 }
-.category:hover h3 {
+#carousel-background .category:hover h3 {
   background-color: #dea467;
   color: #6A1B9A;
   border: 1px solid #6a1b9a;
   border-radius: 10px;
   box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
 }
+#carousel-background #example {
+  background-color: #abbe4b;
+  border: none;
+}
+#carousel-background .category-img {
+  height: 230px;
+  width: 230px;
+}
+#carousel-background .scroll-buttons {
+  height: 150px;
+}
 
-#medical {
+#second-background {
+  background-image: url(assets/images/weeeeeeeeeeed.png);
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 2rem;
+  height: 100%;
+}
+#second-background #medical {
   position: relative;
 }
-#medical i {
+#second-background #medical i {
   position: absolute;
   bottom: 0.5;
   right: 0;
 }
-
-.medical-text {
+#second-background #medical .medical-text {
   text-align: right;
-  font-family: highDesert;
   font-size: 1rem;
 }
-
-#location {
+#second-background #location {
   text-align: right;
-  font-family: highDesert;
   font-size: 1rem;
 }
-
-#sustainable {
+#second-background #location #location-icon {
+  position: relative;
+}
+#second-background #location #location-icon i {
+  position: absolute;
+  right: 0;
+  top: 0.5;
+}
+#second-background #sustainable {
   text-align: left;
-  font-family: highDesert;
   font-size: 1rem;
 }
-
-#example {
-  background-color: #abbe4b;
-  border: none;
+#second-background i.fa-leaf {
+  color: #abbe4b;
 }
-
-.category-img {
-  height: 230px;
-  width: 230px;
+#second-background i.fa-notes-medical {
+  color: #BA68C8;
 }
-
-.shop {
-  margin: 0;
-  padding: 3rem;
-  text-align: center;
-  font-size: 2rem;
-  font-family: highDesert;
-  font-weight: 600;
-  color: #a3583a;
-}
-
-.scroll-buttons {
-  height: 150px;
+#second-background i.fa-earth-europe {
+  color: #1565C0;
 }
 
 #footer-background {
@@ -468,7 +406,6 @@ footer {
   margin-top: 0;
   border-top: solid 4px #dea467;
   box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
-  font-family: highDesert;
   font-size: 1.5rem;
   text-align: center;
   color: #43A047;
@@ -485,6 +422,10 @@ footer h3 {
   color: #abbe4b;
   font-weight: 600;
   margin-bottom: 20px;
+}
+footer .table-container {
+  display: flex;
+  flex-direction: column;
 }
 footer .form-group {
   display: flex;
@@ -518,68 +459,36 @@ footer .submit-btn {
 footer .submit-btn:hover {
   background-color: #0069d9;
 }
-
-.shop-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background-color: #abbe4b;
-}
-.shop-container .shop-card {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 600px;
-  height: 300px;
-  margin: 1rem;
-  padding: 1rem;
-  border: solid 4px #8E24AA;
-  border-radius: 5%;
-  background-color: #f3f3f3;
-  text-align: center;
-  transition: all ease-in-out 0.5s;
-}
-.shop-container .shop-card h3 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  font-family: highDesert;
-  color: #6A1B9A;
-  font-weight: 400;
-  border: 1px solid #6a1b9a;
+footer #hours-operation {
+  padding-left: 1rem;
+  width: auto;
+  height: auto;
+  font-size: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
-  background-color: #dea467;
+  margin-bottom: 20px;
+  color: #d1df93;
 }
-.shop-container .shop-card:hover {
-  border: solid 4px #8E24AA;
-  box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
-  transform: scale(1.115);
+footer #hours-operation caption {
+  color: #d1df93;
 }
-.shop-container .shop-card:hover h3 {
-  background-color: #dea467;
-  color: #6A1B9A;
-  border: 1px solid #6a1b9a;
-  border-radius: 10px;
-  box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
+footer #hours-operation i {
+  color: #a3583a;
+  -webkit-text-stroke: 1px #d1df93;
 }
-.shop-container .shop-card .shop-img {
-  height: 250px;
-  width: 250px;
+footer .social-media {
+  position: relative;
+  height: 200px;
 }
-
-@media screen and (max-width: 480px) {
-  #brand-img {
-    border: 1px solid #dea467;
-    border-radius: 10px;
-    width: 40px;
-    height: 45px;
-  }
-  nav {
-    background-color: #a3583a;
-  }
-  nav .navbar-toggler {
-    background-color: #d1df93;
-  }
+footer .social-media i {
+  position: absolute;
+}
+footer .social-media i.fa-instagram {
+  top: 5;
+  left: 0;
+  color: #dea467;
+}
+footer .social-media i.fa-twitter {
+  bottom: 0;
+  right: 0;
+  color: #dea467;
 }/*# sourceMappingURL=styles.css.map */
