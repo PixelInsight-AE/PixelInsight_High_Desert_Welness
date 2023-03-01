@@ -46,12 +46,6 @@ window.addEventListener('scroll', function() {
   }
 });
 
-
-$('#category-4').hide();
-$('#category-5').hide();
-$('#category-6').hide();
-
-
 var intervalId = null; // needed a check for each click
 
 

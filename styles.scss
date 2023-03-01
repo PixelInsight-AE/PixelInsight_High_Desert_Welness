@@ -1,29 +1,15 @@
-/**
-* TODO : First fun task IMO would be to define the styleGuide.
-
-* ? : I was thinking maybe a light and dark for primary, and a color palette comprised of the rasta colors. Maybe different accent colors for buttons etc. 
-
-* ! We should each have our own branch per section before we actually build anything.
-*/
 * {
   font-family: highDesert;
 }
 
-@import "styles/_variables";
+@import ".styles/_variables";
 @import "./styles/_styleguide";
-
 @import "./styles/breakpoints/styles-xs";
 @import "./styles/breakpoints/styles-sm";
 @import "./styles/breakpoints/styles-md";
 @import "./styles/breakpoints/styles-lg";
 @import "./styles/breakpoints/styles-xl";
 @import "./styles/breakpoints/styles-xxl";
-
-
-
-
-
-
 
 /* main styles */
 // header
@@ -62,8 +48,6 @@ nav {
   }
 }
 
-
-
 // Hero 
 #desert-background {
   background-image: url(assets/images/desertBackground.jpg);
@@ -98,7 +82,7 @@ nav {
 }
 
 #hero-section {
-margin-bottom: 2rem;
+  margin-bottom: 2rem;
   #hero-img {
     border: solid 4px $terpine-light;
     border-right: none;
@@ -147,58 +131,80 @@ margin-bottom: 2rem;
   padding: 0;
   background-image: url();
   @include backgound-img();
-  
-    .shop-container {
-      background-color: $flower-medium;
+
+    #weekly-deal-container {
       @include flex-row();
-      .shop-card {
-        @include flex-row();
-        width: 600px;
-        height: 300px;
-        margin: 2rem; 
-        border: solid 4px $purple-4;
-        border-radius: 5%;
-        background-color: #f3f3f3;
-        text-align: center;
-        transition: all ease-in-out 0.5s;
-        h3 {
-          margin: 2rem;
-          color: $purple-2;
-          font-weight: 400;
-          border: 1px solid rgba($color: $purple-2, $alpha: 1.0);
-          border-radius: 10px;
-          background-color: $terpine-light; 
-          @include nice-box-shadow();
-        }
-        &:hover {
-          border: solid 4px $purple-4;
-          transform: scale(1.115);
-          @include nice-box-shadow();
-        }
-        .shop-img {
-          height: 250px;
-          width: 250px;
-        }
+      flex-direction: column;
+      background-color: $flower-medium;
+      width: 100%;
+      height: 400px;
+      
+      h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: $purple-2;
       }
+
+        .weekly-deal-wrapper {
+          background-color: $flower-medium;
+          @include flex-row();
+          .weekly-deal {
+            @include flex-row();
+            width: 600px;
+            height: 300px;
+            margin: 2rem; 
+            border: solid 4px $purple-4;
+            border-radius: 5%;
+            background-color: #f3f3f3;
+            text-align: center;
+            transition: all ease-in-out 0.5s;
+
+              h3 {
+                margin: 2rem;
+                color: $purple-2;
+                font-weight: 400;
+                border: 1px solid rgba($color: $purple-2, $alpha: 1.0);
+                border-radius: 10px;
+                background-color: $terpine-light; 
+                @include nice-box-shadow();
+              }
+              &:hover {
+                border: solid 4px $purple-4;
+                transform: scale(1.115);
+                @include nice-box-shadow();
+              }
+              .shop-img {
+                height: 250px;
+                width: 250px;
+              }
+          }
+        }
+    }
+  
+    
+    .weekly-deal-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%; 
+      overflow-y: hidden;
     }
 
-
-
-    .carousel-btn {
-      position: absolute;
-    }
     .previous-btn:hover{
       opacity: 1;
     }
     .next-btn:hover{
       opacity: 1;
     }
-
+    
     .previous-btn {
+      position: absolute;
       left: 0;
       @include nav-buttons();
     }
     .next-btn {
+      position: absolute;
       right: 0;
       @include nav-buttons();
     }
@@ -226,32 +232,8 @@ margin-bottom: 2rem;
       text-align: center;
       padding-top: 25px;
     }
-
-    #carousels {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      background-color: $flower-medium;
-      width: 100%;
-      height: 400px;
-      
-      h2 {
-        font-size: 2rem;
-        font-weight: 600;
-        color: $purple-2;
-      }
-    }
-    .carousels-inner {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 100%; 
-      overflow-y: hidden;
-    }
+    
     .category {
-      
       flex-direction: column;
       justify-content: space-between;
       width: 275px;
@@ -268,7 +250,6 @@ margin-bottom: 2rem;
       h3 {
         margin-top: 2rem;
         margin-bottom: 2rem;
-
         color: $purple-2;
         font-weight: 400;
         border: 1px solid rgba($color: $purple-2, $alpha: 1.0);
@@ -290,19 +271,10 @@ margin-bottom: 2rem;
         }
       }
     }
-
-
-    #example {
-      background-color: $flower-medium;
-      border: none;
-    }
-
     .category-img {
       height: 230px;
       width: 230px;
     }
-
-
 
     .scroll-buttons {
       height: 150px;
@@ -326,14 +298,11 @@ margin-bottom: 2rem;
       }
       .medical-text {
         text-align: right;
-    
         font-size: 1rem;
       }
     }
-    
     #location {
       text-align: right;
-  
       font-size: 1rem;
       #location-icon {
         position: relative;
@@ -348,10 +317,8 @@ margin-bottom: 2rem;
     
     #sustainable {
       text-align: left;
-  
       font-size: 1rem;
     }
-    
     i {
       &.fa-leaf {
         color: $flower-medium;
@@ -399,7 +366,6 @@ footer {
     display: flex;
     flex-direction: column;
   }
-
   .form-group {
     display: flex;
     flex-direction: column;
@@ -418,13 +384,11 @@ footer {
         box-shadow: 0 0 5px #ccc;
       }
     }
-
     label {
       font-weight: bold;
       margin-bottom: 5px;
     }
   }
-
   .submit-btn {
     padding: 10px 20px;
     background-color: $flower-medium;
@@ -444,7 +408,6 @@ footer {
     border-radius: 10px;
     margin-bottom: 20px;
     color: $flower-light;
-    
     caption {
       color: $flower-light;
     }
@@ -466,8 +429,7 @@ footer {
       &.fa-twitter {
         bottom: 0;
         right: 0;
-        color: $terpine-light; 
-        
+        color: $terpine-light;  
       }
     }
   }
