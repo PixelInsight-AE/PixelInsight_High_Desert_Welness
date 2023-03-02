@@ -160,8 +160,10 @@ nav {
   font-size: 3rem;
   font-weight: 600;
   color : $terpine-dark;
+  transition: transform 1s;
 }
- 
+
+
 // Carousel start
 #carousel-background {
   padding: 0;
@@ -278,7 +280,9 @@ nav {
       transform: scale(1.115);
       filter: blur(0px);
       h3 {
-        background-color: $terpine-light; 
+        background-color: #f3f3f3;
+        font-size: 2rem; 
+        font-weight: 700;
         color: $purple-2;
         border: 1px solid rgba($color: $purple-2, $alpha: 1.0);
         border-radius: 10px;
@@ -466,4 +470,9 @@ footer {
 
 
 
+
+.scale-up {
+  transform: scale(1.25);
+  filter: blur(0px);
+}
 

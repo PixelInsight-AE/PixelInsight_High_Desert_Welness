@@ -46,9 +46,9 @@ window.addEventListener('scroll', function() {
   }
 });
 
+
+
 var intervalId = null; // needed a check for each click in the global scope not the function
-
-
 $(function(){
   var carousel = $('.carousel ul');
   var carouselChild = carousel.find('li');
@@ -88,12 +88,13 @@ $(function(){
       });
     }
   });
-  let intervalId;
   $('.category').hover(function() {
     console.log("hovered");
     clearInterval(intervalId);
   
   });
+  
+  //let intervalId;
 
   $('.btnPrevious').click(function(){
     clearInterval(intervalId); // Clear the interval
@@ -176,10 +177,17 @@ $(window).scroll(function() {
 function scrollAnimations() {
   if (scrolledToCarousel) {
     $('.btnPrevious').click();
+
+    $('.shop').addClass('scale-up');
+    setTimeout(() => {
+      $('.shop').removeClass('scale-up');
+    }, 1000);
+
+
     $('.shop').animate({
       'transform': 'scale(1.25)',
       'filter': 'blur(0px)'
-    });
+    }, 1000);
   }
 }
 
@@ -189,6 +197,12 @@ $(window).scroll(function() {
   $('#desert-background').css('background-position', 'center ' + scrollTop/2 + 'px');
   //$('#second-background').css('background-position', 'center ' + scrollTop/2 + 'px');
 });
+
+/* $('#').on('scroll', function() {
+  var scrollTop = $(this).scrollTop();
+  $('#second-background').css('background-position', 'center ' + scrollTop/2 + 'px');
+});
+ */
 
 // function checkAgeVerification() {
 //   // Check if the user has already verified their age
@@ -202,3 +216,21 @@ $(window).scroll(function() {
 
 // // Call the checkAgeVerification function when the homepage loads
 // window.onload = checkAgeVerification;
+
+
+var elementTop = $('#second-background').offset().top;
+var scrollTop = $(window).scrollTop();
+var scrollDistance = (elementTop - scrollTop);
+
+var windowHeight = $(window).height();
+if (scrollDistance < (windowHeight / 2)) {
+  // element is in view
+  console.log("in view");
+  // event handler for on scroll
+  $('#second-background').scroll(function() {
+    $('#second-background').css('background-position', 'center ' + scrollTop/2 + 'px');
+  })
+
+
+}
+ 

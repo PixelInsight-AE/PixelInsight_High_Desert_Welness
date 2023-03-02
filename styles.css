@@ -204,6 +204,7 @@ nav .dropdown-menu .i-bl {
   font-size: 3rem;
   font-weight: 600;
   color: #a3583a;
+  transition: transform 1s;
 }
 
 #carousel-background {
@@ -335,7 +336,9 @@ nav .dropdown-menu .i-bl {
   filter: blur(0px);
 }
 #carousel-background .category:hover h3 {
-  background-color: #dea467;
+  background-color: #f3f3f3;
+  font-size: 2rem;
+  font-weight: 700;
   color: #6A1B9A;
   border: 1px solid #6a1b9a;
   border-radius: 10px;
@@ -505,4 +508,9 @@ footer .footer-links ul {
   text-decoration: none;
   color: #d1df93;
   list-style: none;
+}
+
+.scale-up {
+  transform: scale(1.25);
+  filter: blur(0px);
 }/*# sourceMappingURL=styles.css.map */
