@@ -160,12 +160,12 @@ $pink-1: pink;
   background-size: cover;
 }
 
-@mixin backgound-img {
+@mixin background-img {
   
   background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top center;
 }
 
 @mixin flex-row {
@@ -174,7 +174,12 @@ $pink-1: pink;
   justify-content: center;
   align-items: center;
 }
-
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 @mixin big-heading {
   color: $flower-dark;
   margin-top: 3rem;

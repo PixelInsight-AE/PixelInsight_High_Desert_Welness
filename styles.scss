@@ -86,15 +86,15 @@ nav {
 // Hero 
 #desert-background {
   background-image: url(assets/images/desertBackground.jpg);
-  @include backgound-img();
+  @include background-img();
   background-color: rgba(255, 255, 255, 0.8);
-  padding-top: 1rem;
+  //padding-top: 1rem;
 }
 
 #hero-header {
   font-weight: 500;
   font-size: 2rem;
-  margin-top: 1rem;
+  margin-top: 1rem; 
   margin-bottom: 1rem;
   #cultivating {
     color: $flower-dark;
@@ -206,28 +206,6 @@ nav {
     }
   }
   
-  #weekly-deal-container {
-    @include flex-row();
-    flex-direction: column;
-    //background-color: $flower-medium;
-    width: 100%;
-    height: 400px;
-    
-    h2 {
-      font-size: 2rem;
-      font-weight: 600;
-      color: $purple-2;
-    }
-  }
-  .weekly-deal-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%; 
-    overflow-y: hidden;
-  }
-  
   .previous-btn:hover{
     opacity: 1;
   }
@@ -246,7 +224,7 @@ nav {
     @include nav-buttons();
   }
   
-  .carousel{
+    .carousel{
     //background-color: $flower-medium;
     width: 100%;
     overflow: hidden;
@@ -269,7 +247,7 @@ nav {
     text-align: center;
     padding-top: 25px;
   }
-  
+   
   .category {
     flex-direction: column;
     justify-content: space-between;
@@ -323,7 +301,7 @@ nav {
   
   #second-background {
     background-image: url(assets/images/weeeeeeeeeeed.png);
-    @include backgound-img();
+    @include background-img();
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: $terpine-dark;
     padding-top: 2rem;
@@ -371,7 +349,7 @@ nav {
     }
     h3 {
       font-weight: 700;
-      font-size: 2.5rem;
+      font-size: 3rem;
       
     }
     
@@ -391,10 +369,8 @@ nav {
 
 #footer-background {
   background-image: url(assets/images/weedDewDrop.png);
+  @include background-img();
   background-color: rgba(#0d0d0d, 0.7);
-  background-blend-mode: overlay;
-  background-repeat: no-repeat;
-  background-size: cover;
   height: auto;
 }
 
@@ -410,7 +386,7 @@ footer {
     color: $terpine-dark;
   }
   p {
-    margin-top: 4rem;
+    //margin-top: 4rem;
     color: $gray-4;
     font-size: 12px;
   }
@@ -424,16 +400,13 @@ footer {
     flex-direction: column;
   }
   .form-group {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 10px; 
+    @include flex-col();
+    margin: 1rem 3rem 1rem 3rem; 
 
     input {
       padding: 5px;
       border-radius: 5px;
       border: 1px solid #ccc;
-      margin-bottom: 10px;
       width: 100%;
 
       &:focus {
@@ -474,26 +447,16 @@ footer {
     }
   }
   .social-media {
-    position: relative; 
-    height: 200px; 
-    i {
-      position: absolute;
-      &.fa-instagram {
-        top: 5; 
-        left: 0;
-        color: $terpine-light; 
-      }
-      &.fa-twitter {
-        bottom: 0;
-        right: 0;
-        color: $terpine-light;  
-      }
-    }
+   color: $terpine-light;
   }
-  li {
-    list-style: none;
-    color: $flower-light;
-    //margin-bottom: 10px;
+
+  .footer-links {
+    ul {
+      text-decoration: none;
+      color: $flower-light;
+      
+      list-style: none;
+    }
   }
 }
 

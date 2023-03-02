@@ -46,7 +46,7 @@ window.addEventListener('scroll', function() {
   }
 });
 
-var intervalId = null; // needed a check for each click
+var intervalId = null; // needed a check for each click in the global scope not the function
 
 
 $(function(){
@@ -130,6 +130,65 @@ $(function(){
 });
 
 
+// to blur carousel after user has scrolled past carousel div
+let scrolledToCarousel = false;
+
+let carouselScrollTop = $('.carousel').scrollTop();
+console.log(carouselScrollTop);
+
+// $('.sub-hero').on("scroll", function () {
+//   let scrollableHeight = $('.sub-hero').scrollHeight - clientHeight;
+//   if (scrollableHeight === $('.sub-hero').scrollTop) {
+//     $('div.category').addClass("scroll-effect");
+//   }
+// })
+
+let carouselTriggered = false;
+
+$(window).scroll(function() {
+  var carouselTop = $('#second-background').offset().top;
+  var windowBottom = $(window).scrollTop() + $(window).height();
+  
+    let timeOut = setTimeout(function () {
+      console.log(carouselTop);
+      if (windowBottom > carouselTop) {
+        scrolledToCarousel = true;
+        console.log("scrolled to carousel");  
+        scrollAnimations();
+       
+      }
+    }, 100)   
+  });
+  
+  
+  // $( "#clickme" ).click(function() {
+    //   $( "#book" ).animate({
+      //     opacity: 0.25,
+      //     left: "+=50",
+      //     height: "toggle"
+      //   }, 5000, function() {
+        //     // Animation complete.
+        //   });
+        // });
+        
+        
+        
+function scrollAnimations() {
+  if (scrolledToCarousel) {
+    $('.btnPrevious').click();
+    $('.shop').animate({
+      'transform': 'scale(1.25)',
+      'filter': 'blur(0px)'
+    });
+  }
+}
+
+
+$(window).scroll(function() {
+  var scrollTop = $(this).scrollTop();
+  $('#desert-background').css('background-position', 'center ' + scrollTop/2 + 'px');
+  //$('#second-background').css('background-position', 'center ' + scrollTop/2 + 'px');
+});
 
 // function checkAgeVerification() {
 //   // Check if the user has already verified their age
