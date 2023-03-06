@@ -96,16 +96,11 @@ $(function(){
   
   //let intervalId;
 
-  $('.btnPrevious').click(function(){
+  $('.previous-btn').click(function(){
     clearInterval(intervalId); // Clear the interval
     intervalId = setInterval(function() {
-      $('.btnPrevious').click();
+      $('.previous-btn').click();
     }, 3500);
-   
-    
-
-
-
     if(canClick){
       canClick = false;
       clickCount--;
@@ -121,6 +116,11 @@ $(function(){
           canClick = true;
       });
     }
+   
+    
+
+
+
   });
 
   function refreshChildPosition(){

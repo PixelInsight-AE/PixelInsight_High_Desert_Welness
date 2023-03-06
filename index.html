@@ -42,14 +42,14 @@
           <a class="navbar-brand d-flex justify-content-between d-md-none" href="#">
             <img id="brand-img" class="img-fluid" src="./assets/images/inverted-logo.png" alt="logo">
           </a>
-          <h1 class="ms-4">High Desert Wellness</h1>
+          <h1 class="ms-4 d-md-none">High Desert Wellness</h1>
           <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
          
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-              <li>
+              <li class="d-none d-sm-flex">
                 <img id="logo-small" class="img-fluid nav-logo" src="./assets/images/inverted-logo.png" alt="logo">
               </li>
               <li class="navs-item">
@@ -63,10 +63,10 @@
                   Menu
                 </a>
                 <ul class="dropdown-menu">
-                  <i class="fa-solid fa-cannabis fa-2x i-tr"></i>
-                  <i class="fa-solid fa-cannabis fa-2x i-tl"></i>
-                  <i class="fa-solid fa-cannabis fa-2x i-br"></i>
-                  <i class="fa-solid fa-cannabis fa-2x i-bl"></i>
+                  <li class="d-flex justify-content-between">
+                    <i class="fa-solid fa-cannabis fa-2x i-tl"></i>
+                    <i class="fa-solid fa-cannabis fa-2x i-tr"></i>
+                  </li>
                   <li><a class="dropdowns-item" href="#">Flower</a></li>
                   <li><a class="dropdowns-item" href="#">Edibles</a></li>
                   <li><a class="dropdowns-item" href="#">Concentrates</a></li>
@@ -80,7 +80,10 @@
                   <li><a class="dropdowns-item" href="#">Growing</a></li>
                   <li><a class="dropdowns-item" href="#">Accesories</a></li>
                   <li><a class="dropdowns-item" href="#">Apearal</a></li>
-                  
+                  <li class="d-flex justify-content-between">
+                    <i class="fa-solid fa-cannabis fa-2x i-bl"></i>
+                    <i class="fa-solid fa-cannabis fa-2x i-br"></i>
+                  </li>
                 </ul>
               </li>
               <li class="med-card-application">
@@ -125,7 +128,7 @@
       <div class="row">
         <div class="col-12 sub-hero">
           <hr>
-          <h2>High Desert wellness</h2>
+          <h2>High Desert Wellness</h2>
           <p>Welcome to High Desert Wellness, your premier cannabis dispensary serving the greater desert region! We pride ourselves on offering the finest quality cannabis products and accessories to our valued customers.
 
             Our extensive selection of strains includes everything from classic favorites to rare and exotic varieties. Whether you prefer indica, sativa, or hybrid strains, we have something to suit your needs. Our knowledgeable budtenders can help you choose the perfect strain for your desired effect and potency.
@@ -285,7 +288,7 @@
             </ul>
           </div>    
           <div class="col-4 social-media">
-            <div class="table-container">
+            <div class="table-container d-none d-md-block">
               <table id="hours-operation" class="table-radius">
                 
                 <thead>
