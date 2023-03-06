@@ -14,6 +14,7 @@ header {
   @include flex-row();    
   @include text-shadow();
   @include header-background();
+  padding: 1rem;
   img { 
     margin-bottom: 1rem;
     width:  125px;
@@ -93,10 +94,10 @@ nav {
   font-size: 2rem;
   margin-top: 1rem; 
   margin-bottom: 1rem;
-  #cultivating {
+  .cultivating {
     color: $flower-dark;
   }
-  #heat {
+  .heat {
     display: inline-block;
     background: linear-gradient(to top, #ff4500, #ff8c00, #ffd700, #ffff00);
     background-clip: text;
@@ -591,34 +592,50 @@ footer {
       color: $flower-light;
     }
     
-
-  }
     
+  }
+  
 }
 
 
 
 // Small Screen (Bootstrap-sm)
 @media screen and (min-width: 577px) and (max-width: 768px) {
+
+  
+  
+  nav {
+    //background-color: rgba($color: $terpine-light, $alpha: 1.0);  
+    h1 {
+      font-size: 2rem;
+      
+    }
+  }
+  .navbar-toggler {
+    //background-color: $terpine-light;
+    border: 1px solid $purple-4;
+    height: 45px;
+  }
   .navbar {
     padding: 1rem;
   }
   nav #brand-img {
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
   }
-
-
+  
   #hero-section {
     
     #hero-img {
+      border: solid 4px $purple-4;
       border-bottom: none;
       border-radius: 15px 15px 0 0px;
-      border-right: 4px solid $terpine-light;
+      border-right: 4px solid $purple-4;
     }
     
     #mission-statement {
-      border-left: 4px solid $terpine-light;
+      border: solid 4px $purple-4;
+      border-left: 4px solid $purple-4;
       border-top: none;
       border-radius: 0 0 15px 15px;
     }
@@ -673,6 +690,49 @@ footer {
     
 
   }
+
+  #mobile-header {
+    font-size: rem;
+    @include flex-row();    
+    @include text-shadow();
+    @include header-background();
+    margin-top: -44px;
+    //padding: 1rem;
+    img { 
+      margin-bottom: 1rem;
+      width:  125px;
+      height: 130px;
+      }      
+  }
+
+  footer {
+    font-size: 1rem;
+    margin-top: 0;
+    p {
+      //margin-top: 4rem;
+      color: $gray-4;
+      font-size: 10px;
+    }
+    h3 {
+      margin-bottom: 0rem;
+    }
+    .form-group {
+      @include flex-col();
+      margin: 1rem 1rem 2rem 1rem; 
+      input {
+        margin: 1rem;
+        
+      }
+    }
+    #hours-operation {
+      font-size: 1rem;
+      color: $flower-light;
+    }
+    
+    
+  }
+
+
 }
 
 

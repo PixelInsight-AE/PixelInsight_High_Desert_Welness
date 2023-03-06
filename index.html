@@ -28,20 +28,25 @@
   <!-- Header -->
   
   <div id="desert-background">
-    <header>
+    <header class="d-none d-md-flex">
       <img src="./assets/images/newlogo.png" alt="">
       <h1>High Desert Wellness</h1>
     </header> 
       
-      <!-- Navbar -->
-      <nav class="navbar sticky-top navbar-expand-md">
-        <div class="container">
-          <a class="navbar-brand d-flex d-md-none" href="#">
+    
+    
+    <!-- Navbar -->
+    <nav class="navbar sticky-top navbar-expand-md">
+      <div class="container">
+        
+          <a class="navbar-brand d-flex justify-content-between d-md-none" href="#">
             <img id="brand-img" class="img-fluid" src="./assets/images/inverted-logo.png" alt="logo">
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <h1 class="ms-4">High Desert Wellness</h1>
+          <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+         
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav m-auto mb-2 mb-lg-0">
               <li>
@@ -75,7 +80,7 @@
                   <li><a class="dropdowns-item" href="#">Growing</a></li>
                   <li><a class="dropdowns-item" href="#">Accesories</a></li>
                   <li><a class="dropdowns-item" href="#">Apearal</a></li>
-    
+                  
                 </ul>
               </li>
               <li class="med-card-application">
@@ -83,16 +88,23 @@
               </li>
             </ul>
           </div>
-        </div>
-      </nav>
+        
+      </div>
+    </nav>
+    
+    <!-- <div class="d-md-none" id="mobile-header">
+     <img src="./assets/images/newlogo.png" alt=""> 
+    </div> -->
+    
     <div id="hero-header" class="container-fluid text-center" >
       <div class="row">
         <div class="col-12">
-          <h2>"<span id="cultivating">Cultivating</span> a New Kind of <span id="heat">Heat</span> in <span id="new-mexico">New Mexico</span>."</h2>
+          <h2>"<span class="cultivating">Cultivating</span> a New Kind of <span class="heat">Heat</span> in <span class="new-mexico">New Mexico</span>."</h2>
         </div>
       </div>
     </div>
-  
+
+    
     <!-- Hero Section -->
     <div id="hero-section" class="container">
       <div class="row">
