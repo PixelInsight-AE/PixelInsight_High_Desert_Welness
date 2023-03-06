@@ -1,1 +1,10 @@
-/*# sourceMappingURL=styles-lg.css.map */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  #hero-section #hero-img {
+    border-bottom: none;
+    border-radius: 15px 15px 0 0px;
+  }
+  #hero-section #mission-statement {
+    border-top: none;
+    border-radius: 0 0 15px 15px;
+  }
+}/*# sourceMappingURL=styles-lg.css.map */

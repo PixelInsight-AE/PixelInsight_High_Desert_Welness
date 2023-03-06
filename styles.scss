@@ -4,12 +4,9 @@
 
 //@import ".styles/_variables";
 @import "./styles/_styleguide";
-@import "./styles/breakpoints/styles-xs";
-@import "./styles/breakpoints/styles-sm";
-@import "./styles/breakpoints/styles-md";
-@import "./styles/breakpoints/styles-lg";
-@import "./styles/breakpoints/styles-xl";
-@import "./styles/breakpoints/styles-xxl";
+
+
+
 
 /* main styles */
 // header
@@ -133,7 +130,7 @@ nav {
     text-align: center;
     @include nice-box-shadow();
     h3 {
-      margin: 2rem;
+      margin: 1rem;
       font-size: 2rem;
     }
     i {
@@ -324,6 +321,7 @@ nav {
       p {
         font-size: 1rem;
         color: #0d0d0d;
+        @include text-shadow();
       }
     }
     #sustainable {
@@ -349,6 +347,7 @@ nav {
        p {
         font-size: 1rem;
         color: #0d0d0d;
+        @include text-shadow();
        }
     }
     h3 {
@@ -379,7 +378,7 @@ nav {
 }
 
 footer {
-  padding: 1rem;
+  padding: 2rem;
   margin-top: 0;
   border-top: solid 4px $terpine-light;  
   @include nice-box-shadow();
@@ -387,7 +386,8 @@ footer {
   text-align: center;
   color: $green-4;
   a {
-    color: $terpine-dark;
+    color: $flower-light;
+    text-decoration: none;
   }
   p {
     //margin-top: 4rem;
@@ -471,8 +471,213 @@ footer {
 
 
 
+
 .scale-up {
   transform: scale(1.25);
   filter: blur(0px);
 }
 
+// Large Screens (Bootstrap-lg)
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  #hero-section {
+    
+    #hero-img {
+      border-bottom: none;
+      border-radius: 15px 15px 0 0px;
+      border-right: 4px solid $terpine-light;
+    }
+    
+    #mission-statement {
+      border-left: 4px solid $terpine-light;
+      border-top: none;
+      border-radius: 0 0 15px 15px;
+    }
+  }
+  footer {
+    font-size: 1rem;
+    margin-top: 0;
+    p {
+      //margin-top: 4rem;
+      color: $gray-4;
+      font-size: 12px;
+    }
+    h3 {
+      margin-bottom: 0rem;
+    }
+    .form-group {
+      @include flex-col();
+      margin: 1rem 1rem 2rem 1rem; 
+      input {
+        margin: 1rem;
+        
+      }
+    }
+    #hours-operation {
+      font-size: 1rem;
+      color: $flower-light;
+    }
+    
+
+  }
+
+}
+
+// Medium Screen (Bootstrap-md)
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .navbar {
+    padding: 0;
+  }
+
+
+  #hero-section {
+    
+    #hero-img {
+      border-bottom: none;
+      border-radius: 15px 15px 0 0px;
+      border-right: 4px solid $terpine-light;
+    }
+    
+    #mission-statement {
+      border-left: 4px solid $terpine-light;
+      border-top: none;
+      border-radius: 0 0 15px 15px;
+    }
+  }
+
+  #second-background {
+    
+    #location {
+      //color: $blue-2;
+      text-align: left;
+      text-shadow: none;
+    }
+    #sustainable {
+      text-shadow: none;
+      text-align: left;
+      
+    }
+    #medical {
+      text-shadow: none;
+      text-align: left;
+      
+    }
+    .medical-text {
+      text-align: left;
+    }
+      
+  }
+
+  footer {
+    font-size: 1rem;
+    margin-top: 0;
+    p {
+      //margin-top: 4rem;
+      color: $gray-4;
+      font-size: 10px;
+    }
+    h3 {
+      margin-bottom: 0rem;
+    }
+    .form-group {
+      @include flex-col();
+      margin: 1rem 1rem 2rem 1rem; 
+      input {
+        margin: 1rem;
+        
+      }
+    }
+    #hours-operation {
+      font-size: 1rem;
+      color: $flower-light;
+    }
+    
+
+  }
+    
+}
+
+
+
+// Small Screen (Bootstrap-sm)
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+  nav #brand-img {
+    width: 45px;
+    height: 45px;
+  }
+
+
+  #hero-section {
+    
+    #hero-img {
+      border-bottom: none;
+      border-radius: 15px 15px 0 0px;
+      border-right: 4px solid $terpine-light;
+    }
+    
+    #mission-statement {
+      border-left: 4px solid $terpine-light;
+      border-top: none;
+      border-radius: 0 0 15px 15px;
+    }
+  }
+
+  #second-background {
+    
+    #location {
+      //color: $blue-2;
+      text-align: left;
+      text-shadow: none;
+    }
+    #sustainable {
+      text-shadow: none;
+      text-align: left;
+      
+    }
+    #medical {
+      text-shadow: none;
+      text-align: left;
+      
+    }
+    .medical-text {
+      text-align: left;
+    }
+      
+  }
+
+  footer {
+    font-size: 1rem;
+    margin-top: 0;
+    p {
+      //margin-top: 4rem;
+      color: $gray-4;
+      font-size: 10px;
+    }
+    h3 {
+      margin-bottom: 0rem;
+    }
+    .form-group {
+      @include flex-col();
+      margin: 1rem 1rem 2rem 1rem; 
+      input {
+        margin: 1rem;
+        
+      }
+    }
+    #hours-operation {
+      font-size: 1rem;
+      color: $flower-light;
+    }
+    
+
+  }
+}
+
+
+
+// Extra Small (Bootstrap-xs)
+@media screen and (max-width: 576px) {
+
+}

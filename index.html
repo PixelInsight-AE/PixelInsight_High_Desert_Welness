@@ -34,10 +34,10 @@
     </header> 
       
       <!-- Navbar -->
-      <nav class="navbar sticky-top navbar-expand-lg">
+      <nav class="navbar sticky-top navbar-expand-md">
         <div class="container">
           <a class="navbar-brand d-flex d-md-none" href="#">
-            <img id="brand-img" class="img-fluid" src="./assets/images/newlogo.png" alt="logo">
+            <img id="brand-img" class="img-fluid" src="./assets/images/inverted-logo.png" alt="logo">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -96,10 +96,10 @@
     <!-- Hero Section -->
     <div id="hero-section" class="container">
       <div class="row">
-        <div class="col-xs-12 col-md-9 text-center p-0">
+        <div class="col-xs-12 col-xl-9 text-center p-0">
           <img id="hero-img" class="img-fluid" src="./assets/images/insideDispensary.png" alt="">
         </div>
-        <div id="mission-statement" class="col-xs-12 col-md-3">  
+        <div id="mission-statement" class="col-xs-12 col-xl-3">  
           <h3><i class="fa-solid fa-cannabis"></i> Mission statement <i class="fa-solid fa-cannabis"></i></h3>
           <hr>
           <p>
@@ -129,7 +129,7 @@
         </div>
       </div>
     </div>
-    <h2 class="shop">Enter Shop!</h2>
+    <h2 class="shop d-none d-md-block">Enter Shop!</h2>
   </div>
     <!-- Map and weekly deals -->
     <div id="carousel-background" class="container-fluid">
@@ -214,66 +214,65 @@
     <div id="second-background"> 
       <div class="container">
         <div class="row">    
-          <div class="col-4" id="location-icon">
+          <div class="col-lg-4 d-none d-lg-flex" id="location-icon">
             <i class="fa-solid fa-earth-europe fa-10x"></i> 
           </div>
-          <div id="location" class="col-8">
+          <div id="location" class="col-lg-8 col-xs-12 ">
             <h3>Location</h3>
             <p>Welcome to the Land of Enchantment, where the skies are blue and the medical marijuana is green! New Mexico is one of the coolest states in the country, and we're not just talking about the temperature. Our medical marijuana program is top-notch, and we're proud to offer a wide range of products that can help you feel your best. <br>
               
               Whether you're hiking in the Sandia Mountains, exploring the unique culture of Santa Fe, or just chilling out in Albuquerque, our dispensaries are here to provide you with the best medical marijuana products around. We've got everything from classic strains to innovative new products like edibles and tinctures that can help you manage your symptoms in a fun and tasty way.</p>
-            </div>
-            <hr>
+          </div>
+          <hr>
             <!-- sustainably grown -->
-            <div id="sustainable" class="col-8">
-              <h3>Sustainably Grown</h3>
-              <p>At High Desert Wellness, we offer a wide variety of sustainably grown cannabis products, including flower, concentrates, and edibles. Our knowledgeable staff can help you choose the perfect product to fit your needs and preferences, and we always prioritize sustainable options whenever possible. <br>
-                
-                By choosing sustainably grown cannabis, you can feel good about supporting responsible growers and protecting the environment. Visit High Desert Wellness today to experience the benefits of sustainably grown cannabis for yourself.</p>
-              </div>
-              <div class="col-4">
-                <i class="fa-solid fa-leaf fa-10x"></i>
-              </div>
-              <hr>
+          <div id="sustainable" class="col-lg-8">
+            <h3>Sustainably Grown</h3>
+            <p>At High Desert Wellness, we offer a wide variety of sustainably grown cannabis products, including flower, concentrates, and edibles. Our knowledgeable staff can help you choose the perfect product to fit your needs and preferences, and we always prioritize sustainable options whenever possible. <br>
+            By choosing sustainably grown cannabis, you can feel good about supporting responsible growers and protecting the environment. Visit High Desert Wellness today to experience the benefits of sustainably grown cannabis for yourself.</p>
+          </div>
+          <div class="col-lg-4 d-none d-lg-flex">
+            <i class="fa-solid fa-leaf fa-10x"></i>
+          </div>
+          <hr>
               <!-- Medically Certified -->
-              <div id="medical" class="col-4">
-                <i class="fa-solid fa-notes-medical fa-10x"></i>
-                
-              </div>
-              <div  class="col-8 medical-text">
-          <h3>Medically Certified</h3>
-          <p>Learn about medical marijuana in New Mexico and get a medical marijuana card with the help of experienced healthcare providers registered with the New Mexico Department of Health. Visit any of our dispensaries to purchase various products including flower, edibles, and tinctures. We provide a safe and comfortable environment with knowledgeable staff available to answer your questions. Come visit us today to take control of your health and explore the benefits of medical cannabis.</p>
-          
-        </div>   
+          <div id="medical" class="col-lg-4 d-none d-lg-flex">
+            <i class="fa-solid fa-notes-medical fa-10x"></i>
+            
+          </div>
+          <div  class="col-lg-8 medical-text">
+            <h3>Medically Certified</h3>
+            <p>Learn about medical marijuana in New Mexico and get a medical marijuana card with the help of experienced healthcare providers registered with the New Mexico Department of Health. Visit any of our dispensaries to purchase various products including flower, edibles, and tinctures. We provide a safe and comfortable environment with knowledgeable staff available to answer your questions. Come visit us today to take control of your health and explore the benefits of medical cannabis.</p>
+          </div>   
+        </div>
       </div>
     </div>
-  </div>
     
   
     <!-- Footer -->
     <div id="footer-background">
       <footer class="container-fluid">
-        <div class="row">
-          <div class="col-3">
+      <div class="row">
+          <div class="col-5">
             <form>
               <h3>Join our Weekly newsletter</h3>
               <div class="form-group">
                 <input type="email" name="email" id="email" placeholder="email:">
                 <label for="email"></label>
+                <button class="submit-btn">Subscribe</button>
               </div>
-              <button class="submit-btn">Subscribe</button>
             </form>
           </div>
-          <div class="col-4 footer-links">
+          <div class="col-3 footer-links">
             <ul>
-              <li>About Us</li>
-              <li>some site link</li>
-              <li>some site link</li>
-              <li>Legal Stuff</li>
-              <li>Links</li>
+              <li><a href="./">About us</a></li>
+              <li><a href="./">Contact us</a></li>
+              <li><a href="./">Careers</a></li>
+              <li><a href="./">FAQ</a></li>
+              <li><a href="./">Legal Stuff</a></li>
+              <li><a href="./">Links</a></li>
             </ul>
           </div>    
-          <div class="col-5 social-media">
+          <div class="col-4 social-media">
             <div class="table-container">
               <table id="hours-operation" class="table-radius">
                 
@@ -312,19 +311,14 @@
                 </table>
               </div>
             </div>
-            <div class="col-8">
+            <div class="col-12">
               <p>Disclaimer:
                 
                 This product is not for use by or sale to persons under the age of 21. Consult with a physician before use if you have a serious medical condition or use prescription medications. These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. By using this site you agree to follow the Privacy Policy and all Terms & Conditions printed on this site.</p>
                 
               </div>
-              <!-- social media -->
-              <div class="col-4 social-media">
-                
-                
-                
-                
-                
+              <div class="col-12">
+                <p>© 2020 High Desert Wellness. All Rights Reserved.</p>
               </div>
               
             </footer>
