@@ -13,15 +13,6 @@
     VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments
  */
 
-function log() {
-  console.log('hello world')
-}
-
-log();
-
-
-
-
 // When the user scrolls the page, execute myFunction
 window.addEventListener('scroll', function() {
 
@@ -66,10 +57,10 @@ $(function(){
   refreshChildPosition();
 
   //Set the event handlers for buttons.
-  $('.btnNext').click(function(){
+  $('.next-btn').click(function(){
     clearInterval(intervalId); // Clear the interval
     intervalId = setInterval(function() {
-      $('.btnNext').click();
+      $('.next-btn').click();
     }, 3500);
 
     if(canClick){
@@ -137,13 +128,6 @@ let scrolledToCarousel = false;
 let carouselScrollTop = $('.carousel').scrollTop();
 console.log(carouselScrollTop);
 
-// $('.sub-hero').on("scroll", function () {
-//   let scrollableHeight = $('.sub-hero').scrollHeight - clientHeight;
-//   if (scrollableHeight === $('.sub-hero').scrollTop) {
-//     $('div.category').addClass("scroll-effect");
-//   }
-// })
-
 let carouselTriggered = false;
 
 $(window).scroll(function() {
@@ -160,23 +144,10 @@ $(window).scroll(function() {
       }
     }, 100)   
   });
-  
-  
-  // $( "#clickme" ).click(function() {
-    //   $( "#book" ).animate({
-      //     opacity: 0.25,
-      //     left: "+=50",
-      //     height: "toggle"
-      //   }, 5000, function() {
-        //     // Animation complete.
-        //   });
-        // });
-        
-        
-        
+   
 function scrollAnimations() {
   if (scrolledToCarousel) {
-    $('.btnPrevious').click();
+    $('.previous-btn').click();
 
     $('.shop').addClass('scale-up');
     setTimeout(() => {
@@ -197,26 +168,6 @@ $(window).scroll(function() {
   $('#desert-background').css('background-position', 'center ' + scrollTop/2 + 'px');
   //$('#second-background').css('background-position', 'center ' + scrollTop/2 + 'px');
 });
-
-/* $('#').on('scroll', function() {
-  var scrollTop = $(this).scrollTop();
-  $('#second-background').css('background-position', 'center ' + scrollTop/2 + 'px');
-});
- */
-
-// function checkAgeVerification() {
-//   // Check if the user has already verified their age
-//   const ageVerified = localStorage.getItem('ageVerified');
-
-//   if (!ageVerified) {
-//     // If the user hasn't verified their age, redirect to the age verification page
-//     window.location.href = 'age-verification.html';
-//   }
-// }
-
-// // Call the checkAgeVerification function when the homepage loads
-// window.onload = checkAgeVerification;
-
 
 var elementTop = $('#second-background').offset().top;
 var scrollTop = $(window).scrollTop();
