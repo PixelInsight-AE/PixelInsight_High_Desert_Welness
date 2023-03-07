@@ -294,7 +294,6 @@ nav i {
   background-color: #f3f3f3;
   text-align: center;
   transition: all ease-in-out 0.5s;
-  filter: blur(3px);
 }
 #carousel-background .category h3 {
   margin-top: 2rem;
@@ -310,7 +309,6 @@ nav i {
   border: solid 4px #8E24AA;
   box-shadow: 0 16px 32px rgba(163, 88, 58, 0.2);
   transform: scale(1.115);
-  filter: blur(0px);
 }
 #carousel-background .category:hover h3 {
   background-color: #f3f3f3;
@@ -478,8 +476,8 @@ footer #hours-operation caption {
   color: #d1df93;
 }
 footer #hours-operation i {
-  color: #a3583a;
-  -webkit-text-stroke: 1px #d1df93;
+  color: #d1df93;
+  -webkit-text-stroke: 1px #a3583a;
 }
 footer .social-media {
   color: #dea467;
@@ -492,7 +490,6 @@ footer .footer-links ul {
 
 .scale-up {
   transform: scale(1.25);
-  filter: blur(0px);
 }
 
 @media screen and (min-width: 993px) and (max-width: 1200px) {
@@ -593,6 +590,7 @@ footer .footer-links ul {
   }
   nav h1 {
     font-size: 2rem;
+    margin: auto;
   }
   nav .dropdown {
     position: relative;
@@ -610,15 +608,14 @@ footer .footer-links ul {
   }
   #hero-section #hero-img {
     border: solid 4px #8E24AA;
-    border-bottom: none;
-    border-radius: 15px 15px 0 0px;
+    border-radius: 15px;
     border-right: 4px solid #8E24AA;
   }
   #hero-section #mission-statement {
     border: solid 4px #8E24AA;
     border-left: 4px solid #8E24AA;
     border-top: none;
-    border-radius: 0 0 15px 15px;
+    border-radius: 15px;
   }
   #second-background #location {
     text-align: left;
@@ -705,13 +702,18 @@ footer .footer-links ul {
     font-size: 1rem;
     color: #d1df93;
   }
+  footer i {
+    color: #d1df93;
+    margin: 5px;
+  }
 }
 @media screen and (max-width: 576px) {
   nav {
     width: 100%;
   }
   nav h1 {
-    font-size: 2rem;
+    font-size: 1.25rem;
+    margin: auto;
   }
   nav .dropdown {
     position: relative;
@@ -729,8 +731,7 @@ footer .footer-links ul {
   }
   #hero-section #hero-img {
     border: solid 4px #8E24AA;
-    border-bottom: none;
-    border-radius: 15px 15px 0 0px;
+    border-radius: 15px;
     border-right: 4px solid #8E24AA;
   }
   #hero-section #mission-statement {
@@ -827,5 +828,14 @@ footer .footer-links ul {
   footer #hours-operation {
     font-size: 1rem;
     color: #d1df93;
+  }
+  footer .mobile-social-media {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+  }
+  footer .mobile-social-media i {
+    color: #d1df93;
+    margin: 5px;
   }
 }/*# sourceMappingURL=styles.css.map */

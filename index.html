@@ -39,11 +39,11 @@
     <nav class="navbar sticky-top navbar-expand-md">
       <div class="container">
         
-          <a class="navbar-brand d-flex justify-content-between d-md-none" href="#">
+          <!-- <a class="navbar-brand  d-md-none" href="#">
             <img id="brand-img" class="img-fluid" src="./assets/images/inverted-logo.png" alt="logo">
-          </a>
-          <h1 class="ms-4 d-md-none">High Desert Wellness</h1>
-          <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          </a> -->
+          <h1 class="d-md-none">High Desert Wellness</h1>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
          
@@ -114,7 +114,7 @@
         <div class="col-xs-12 col-xl-9 text-center p-0">
           <img id="hero-img" class="img-fluid" src="./assets/images/insideDispensary.png" alt="">
         </div>
-        <div id="mission-statement" class="col-xs-12 col-xl-3">  
+        <div id="mission-statement" class="col-12 d-none d-md-block col-xl-3 d-xs-none">  
           <h3><i class="fa-solid fa-cannabis"></i> Mission statement <i class="fa-solid fa-cannabis"></i></h3>
           <hr>
           <p>
@@ -128,7 +128,7 @@
       <div class="row">
         <div class="col-12 sub-hero">
           <hr>
-          <h2>High Desert Wellness</h2>
+          <h2 class="d-none d-md-block">High Desert Wellness</h2>
           <p>Welcome to High Desert Wellness, your premier cannabis dispensary serving the greater desert region! We pride ourselves on offering the finest quality cannabis products and accessories to our valued customers.
 
             Our extensive selection of strains includes everything from classic favorites to rare and exotic varieties. Whether you prefer indica, sativa, or hybrid strains, we have something to suit your needs. Our knowledgeable budtenders can help you choose the perfect strain for your desired effect and potency.
@@ -267,7 +267,7 @@
     <div id="footer-background">
       <footer class="container-fluid">
       <div class="row">
-          <div class="col-5">
+          <div class="col-8 col-md-5">
             <form>
               <h3>Join our Weekly newsletter</h3>
               <div class="form-group">
@@ -277,7 +277,7 @@
               </div>
             </form>
           </div>
-          <div class="col-3 footer-links">
+          <div class="col-4 col-md-3 footer-links">
             <ul>
               <li><a href="./">About us</a></li>
               <li><a href="./">Contact us</a></li>
@@ -287,8 +287,8 @@
               <li><a href="./">Links</a></li>
             </ul>
           </div>    
-          <div class="col-4 social-media">
-            <div class="table-container d-none d-md-block">
+          <div class="d-none d-md-block col-md-4 social-media">
+            <div class="table-container">
               <table id="hours-operation" class="table-radius">
                 
                 <thead>
@@ -316,9 +316,9 @@
                   </tr>
                   <tr>
                     <td>
-                      <i class="fa-brands fa-instagram"></i>
-                      <i class="fa-brands fa-twitter"></i>
-                      <i class="fa-brands fa-facebook-square"></i>
+                      <i class="fa-brands fa-instagram fa-2x"></i>
+                      <i class="fa-brands fa-twitter fa-2x"></i>
+                      <i class="fa-brands fa-facebook-square fa-2x"></i>
                     </td>
                     <td colspan="2">Hours of Operation <i class="fa-solid fa-cannabis"></td>
                     </tr>
@@ -331,12 +331,23 @@
                 
                 This product is not for use by or sale to persons under the age of 21. Consult with a physician before use if you have a serious medical condition or use prescription medications. These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. By using this site you agree to follow the Privacy Policy and all Terms & Conditions printed on this site.</p>
                 
-              </div>
-              <div class="col-12">
-                <p>© 2020 High Desert Wellness. All Rights Reserved.</p>
-              </div>
               
+            </div>
+            <div class="col-12">
+              <p>© 2020 High Desert Wellness. All Rights Reserved.</p>
+            </div>
+            <div class="col-12 d-block d-md-none mobile-social-media">
+              <!-- <i class="weed-sq fa-solid fa-cannabis fa-3x"></i>
+              <i class="fb-sq fa-brands fa-square-facebook"></i> -->
+              <i class="fa-brands fa-instagram fa-2x"></i>
+              <i class="fa-brands fa-square-facebook fa-2x"></i>
+              <i class="fa-regular fa-envelope fa-2x"></i>
+              <i class="fa-brands fa-square-twitter fa-2x"></i>
+              
+            </div>
             </footer>
+
+            <!-- <i class="fa-solid fa-cannabis fa-6x test"></i> -->
           </div>
           <script src="./main.js"></script>
         </body>

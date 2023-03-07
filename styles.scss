@@ -81,7 +81,7 @@ nav {
   margin-bottom: 1rem;
   .cultivating {
     color: $flower-dark;
-  }
+  } 
   .heat {
     display: inline-block;
     background: linear-gradient(to top, #ff4500, #ff8c00, #ffd700, #ffff00);
@@ -210,7 +210,6 @@ nav {
   }
   
     .carousel{
-    //background-color: $flower-medium;
     width: 100%;
     overflow: hidden;
     height: 450px;
@@ -246,7 +245,7 @@ nav {
     background-color: #f3f3f3;
     text-align: center;
     transition: all ease-in-out 0.5s;
-    filter: blur(3px);
+    //filter: blur(3px);
     h3 {
       margin-top: 2rem;
       margin-bottom: 2rem;
@@ -261,7 +260,7 @@ nav {
       border: solid 4px $purple-4;
       @include nice-box-shadow();
       transform: scale(1.115);
-      filter: blur(0px);
+      //filter: blur(0px);
       h3 {
         background-color: #f3f3f3;
         font-size: 2rem; 
@@ -432,8 +431,8 @@ footer {
       color: $flower-light;
     }
     i {
-      color: $terpine-dark;
-      -webkit-text-stroke: 1px $flower-light;
+      color: $flower-light;
+      -webkit-text-stroke: 1px $terpine-dark;
     }
   }
   .social-media {
@@ -457,10 +456,9 @@ footer {
 
 
 
-
 .scale-up {
   transform: scale(1.25);
-  filter: blur(0px);
+  //filter: blur(0px);
 }
 
 // Large Screens (Bootstrap-lg)
@@ -593,7 +591,7 @@ footer {
     //background-color: rgba($color: $terpine-light, $alpha: 1.0);  
     h1 {
       font-size: 2rem;
-      
+      margin: auto;
     }
     .dropdown {
 
@@ -621,8 +619,7 @@ footer {
     
     #hero-img {
       border: solid 4px $purple-4;
-      border-bottom: none;
-      border-radius: 15px 15px 0 0px;
+      border-radius: 15px;
       border-right: 4px solid $purple-4;
     }
     
@@ -630,7 +627,7 @@ footer {
       border: solid 4px $purple-4;
       border-left: 4px solid $purple-4;
       border-top: none;
-      border-radius: 0 0 15px 15px;
+      border-radius: 15px;
     }
   }
 
@@ -722,7 +719,10 @@ footer {
       font-size: 1rem;
       color: $flower-light;
     }
-    
+    i {
+      color: $flower-light;
+      margin: 5px;
+    }
     
   }
 
@@ -736,8 +736,8 @@ footer {
   nav {
     //background-color: rgba($color: $terpine-light, $alpha: 1.0);  
     h1 {
-      font-size: 2rem;
-      
+      font-size: 1.25rem;
+      margin: auto;
     }
     .dropdown {
 
@@ -765,8 +765,8 @@ footer {
     
     #hero-img {
       border: solid 4px $purple-4;
-      border-bottom: none;
-      border-radius: 15px 15px 0 0px;
+      //border-bottom: none;
+      border-radius: 15px;
       border-right: 4px solid $purple-4;
     }
     
@@ -869,6 +869,17 @@ footer {
     #hours-operation {
       font-size: 1rem;
       color: $flower-light;
+    }
+
+    .mobile-social-media {
+      display: flex;
+      justify-content: space-evenly;
+      position: relative;
+      i {
+        color: $flower-light;
+        margin: 5px;
+      }
+      
     }
     
     
